@@ -12,7 +12,7 @@ public class Evenement {
 	double proba;
 	Date uneDateEvenement;
 	
-
+	//Evenement aléatoire à deux choix
 	public Evenement(String nom, String choix1, String choix2,	double valeurPopChoix1, double valeurPopChoix2, double valeurEneChoix1, double valeurEneChoix2,double valeurResChoix1, double valeurResChoix2, double proba,Date date){
 		event=nom;
 		this.choix1=choix1;
@@ -30,6 +30,7 @@ public class Evenement {
 		}
 	}
 
+	//Evenement non aléatoire à deux choix
 	public Evenement(String nom, String choix1, String choix2,	double valeurPopChoix1, double valeurPopChoix2, double valeurEneChoix1, double valeurEneChoix2,double valeurResChoix1, double valeurResChoix2, Date date){
 		event=nom;
 		this.choix1=choix1;
@@ -44,6 +45,7 @@ public class Evenement {
 		proba = 1;
 	}
 	
+	//Evenement aléatoire à trois choix
 	public Evenement(String nom, String choix1, String choix2, String choix3, 	double valeurPopChoix1, double valeurPopChoix2, double valeurPopChoix3,double valeurEneChoix1, double valeurEneChoix2, double valeurEneChoix3,double valeurResChoix1, double valeurResChoix2, double valeurResChoix3, double proba, Date uneDateEvenement){
 		event=nom;
 		this.choix1=choix1;
@@ -66,6 +68,7 @@ public class Evenement {
 	}
 	
 
+	//evenement non aléatoire à trois choix
 	public Evenement(String nom, String choix1, String choix2, String choix3, 	double valeurPopChoix1, double valeurPopChoix2, double valeurPopChoix3,double valeurEneChoix1, double valeurEneChoix2, double valeurEneChoix3,double valeurResChoix1, double valeurResChoix2, double valeurResChoix3, Date uneDateEvenement){
 		event=nom;
 		this.choix1=choix1;
