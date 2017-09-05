@@ -69,9 +69,10 @@ public class Main {
 					System.out.println("Popularité:"+Joueur.getBarrePopularite());
 					System.out.println("Résultats:"+Joueur.getBarreResultats());
 
-					System.out.println("Faites votre choix : (entrez un chiffre)");
+					
 					String str="";
 					do{
+						System.out.println("Faites votre choix : (entrez un chiffre)");
 						str = sc.nextLine();
 					}while(!EntierPositifNonVide.entre(str, 1, moment.getNbChoix()));
 					if(Integer.parseInt(str)==1){
