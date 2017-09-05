@@ -50,7 +50,29 @@ public class Evenement {
 	
 	public void consequenceChoix1(){
 		System.out.println("Vous avez choisi "+ this.choix1);
-		Barre barre = new Barre(NomBarre.ENERGIE);
+		Main.getBarreEnergie().setValeur(Main.getBarreEnergie().getValeur()+valeurEneChoix1);
+		Main.getBarrePopularite().setValeur(Main.getBarrePopularite().getValeur()+valeurPopChoix1);
+		Main.getBarreResultats().setValeur(Main.getBarreResultats().getValeur()+valeurResChoix1);
+		
+		
+	}
+	
+	public void consequenceChoix2(){
+		System.out.println("Vous avez choisi "+ this.choix2);
+		Main.getBarreEnergie().setValeur(Main.getBarreEnergie().getValeur()+valeurEneChoix2);
+		Main.getBarrePopularite().setValeur(Main.getBarrePopularite().getValeur()+valeurPopChoix2);
+		Main.getBarreResultats().setValeur(Main.getBarreResultats().getValeur()+valeurResChoix2);
+		
+		
+	}
+	
+	public void consequenceChoix3(){
+		System.out.println("Vous avez choisi "+ this.choix3);
+		Main.getBarreEnergie().setValeur(Main.getBarreEnergie().getValeur()+valeurEneChoix3);
+		Main.getBarrePopularite().setValeur(Main.getBarrePopularite().getValeur()+valeurPopChoix3);
+		Main.getBarreResultats().setValeur(Main.getBarreResultats().getValeur()+valeurResChoix3);
+		
+		
 	}
 	
 }
