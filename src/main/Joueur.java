@@ -22,7 +22,12 @@ public class Joueur {
 	public static void setBarreResultats(Barre barreResultats1) {
 		barreResultats = barreResultats1;
 	}
-	public static boolean BarreNegative(){
-		return (getBarreEnergie().getValeur()<=0 || getBarrePopularite().getValeur()<=0 || getBarreResultats().getValeur()<=0);
+	public static void BarreHorsLimites(){
+		if(getBarreEnergie().getValeur()<=0) Fins.setFinactive(2);
+		if(getBarreEnergie().getValeur()>=100) Fins.setFinactive(3);
+		if(getBarrePopularite().getValeur()<=0) Fins.setFinactive(4);
+		if(getBarrePopularite().getValeur()>=100) Fins.setFinactive(5);
+		if(getBarreResultats().getValeur()<=0) Fins.setFinactive(6);
+		if(getBarreResultats().getValeur()>=100) Fins.setFinactive(7);
 	}
 }
