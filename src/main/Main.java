@@ -90,7 +90,7 @@ public class Main {
 			}
 		}while(Fins.getFinactive() == -1);
 		
-		Fins.finDuJeu();
+		System.out.println(Fins.finDuJeu());
 		System.out.println("Tu as survecu " + nbrJours + "jours avec un score de " + score);
 	}
 	
