@@ -19,10 +19,18 @@ public class Main {
 		
 		do{
 			System.out.println(new Date(semaineActuelle,jourActuel,heureActuelle).toString());
+			Evenement moment=null;
 			for(Evenement e:e1){
 				if(e.uneDateEvenement.getHeure()==heureActuelle && e.uneDateEvenement.getJour()==jourActuel && e.uneDateEvenement.getSemaine()==semaineActuelle){
-					System.out.println(e.toString());
+					moment=e;
 				}
+			}
+			if(moment==null){
+				System.out.println("\n Il n'y a pas eu d'évenement à cette heure ci!");
+			}else{
+				System.out.println(moment.toString());
+				//faire ici choix et gestion du choix
+				
 			}
 			System.out.println("Energie:"+Joueur.getBarreEnergie());
 			System.out.println("Popularité:"+Joueur.getBarrePopularite());
