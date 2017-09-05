@@ -4,6 +4,7 @@ package main;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Main {
 
@@ -11,6 +12,7 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
 		Random r = new Random();
 		boolean fini=false;
 		int jourActuel=1;
@@ -39,7 +41,25 @@ public class Main {
 				System.out.println("Energie:"+Joueur.getBarreEnergie());
 				System.out.println("Popularité:"+Joueur.getBarrePopularite());
 				System.out.println("Résultats:"+Joueur.getBarreResultats());
-				//faire ici choix et gestion du choix
+				
+				System.out.println("Faites votre choix : (entrez un chiffre)");
+				String str = sc.nextLine();
+				while( str == "1" || str == "2" || str == "3"){
+					if(str == "1"){
+						moment.consequenceChoix1();
+					}
+					else if(str == "2"){
+						moment.consequenceChoix2();
+					}
+					else {
+						moment.consequenceChoix3();
+					}
+					while(str != "1" || str != "2" || str != "3"){
+						System.out.println("Mettez un chiffre entre 1 et 3");
+						str = sc.nextLine();
+					}
+					sc.nextLine();
+				}
 				
 			}
 
