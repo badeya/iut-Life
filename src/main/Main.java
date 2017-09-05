@@ -80,7 +80,10 @@ public class Main {
 		
 		//Vérifie la fin
 		Joueur.BarreHorsLimites();
-
+		if (jourActuel == 7 && semaineActuelle == 2 && heureActuelle == 23) {
+			Fins.setFinactive(1);
+			
+		}
 
 	}while(Fins.getFinactive() == -1);
 	Fins.finDuJeu();
