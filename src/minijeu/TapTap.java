@@ -13,9 +13,9 @@ public class TapTap {
 		
 		int cpt=0;
 		
-		System.out.println("vous avez" + timefin + " secondes pour appuyer le plus de fois sur la touche entree");
+		System.out.println("vous avez" + timefin + "pour appuyer 40 fois");
 		System.out.println("appuyez quand vous etes pret");
-		
+		sc.nextLine();
 		long depart=System.nanoTime();
 		do{
 			sc.nextLine();
@@ -24,10 +24,10 @@ public class TapTap {
 			
 		}while(System.nanoTime()<depart+timefin);
 		
-		if(cpt>10){
-			System.out.println("vous avez réussi");
+		if(cpt>40){
+			System.out.println("vous avez réussi à appuyer "+cpt);
 		}else
-			System.out.println("vous avez échoué");
+			System.out.println("vous avez échoué, vous avez appuyer "+cpt);
 		
 		return cpt;
 		

@@ -17,7 +17,7 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		
+		TapTap.main(sc);
 		Random r = new Random();
 		boolean fini=false;
 		int jourActuel=1;
@@ -95,7 +95,7 @@ public class Main {
 						Joueur.setBarreEnergie(new Barre(NomBarre.ENERGIE));
 					}
 				}else if(val<0.1){
-					if(TapTap.main(sc)>10){
+					if(TapTap.main(sc)>40){
 						Joueur.setBarrePopularite(new Barre(NomBarre.POPULARITE));
 					}
 					
