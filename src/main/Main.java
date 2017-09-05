@@ -27,7 +27,7 @@ public class Main {
 		
 		do{
 			heureActuelle++;
-			if(heureActuelle>24){
+			if(heureActuelle>23){
 				jourActuel++;
 				heureActuelle=0;
 			}
