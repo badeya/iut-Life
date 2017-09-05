@@ -11,6 +11,7 @@ public class TapAXSecondes {
 		Random r=new Random();
 		int time=r.nextInt(3)+2;
 		System.out.println("Il vous faut taper sur entrée 2 fois d'affilée à "+time+" secondes d'intervalle!");
+		System.out.println("Si tu réussi, Tu réinitialise ta bare d'energie!");
 		System.out.println("Appuyez dès que vous êtes pret!");
 		sc.nextLine();
 		long depart=System.nanoTime();
