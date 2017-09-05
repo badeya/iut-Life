@@ -5,8 +5,6 @@ public class Date {
 	private String jour;
 	private String heure;
 	
-	
-	
 	public Date(String semaine, String jour, String heure){
 		this.semaine=semaine;
 		this.jour=jour;
