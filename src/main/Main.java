@@ -19,50 +19,65 @@ public class Main {
 		int semaineActuelle=1;
 		int heureActuelle=1;
 
-		List<Evenement> e1 = new ArrayList<Evenement>();
-		
+		GenerationEvenements ge=new GenerationEvenements();
+
+		List<Evenement> e1 = ge.getEvenements();
+
 		do{
+			heureActuelle++;
+			if(heureActuelle>24){
+				jourActuel++;
+				heureActuelle=0;
+			}
+			if(jourActuel==8){
+				jourActuel=1;
+				semaineActuelle++;
+			}
 			System.out.println(new Date(semaineActuelle,jourActuel,heureActuelle).toString());
 			Evenement moment=null;
 			for(Evenement e:e1){
 				if(e.uneDateEvenement.getHeure()==heureActuelle && e.uneDateEvenement.getJour()==jourActuel && e.uneDateEvenement.getSemaine()==semaineActuelle){
-					if(moment.proba > r.nextDouble()){
+
 					moment=e;
-					}
+
 				}
-					
-				
+
+
 			}
 			if(moment==null){
 				System.out.println("\n Il n'y a pas eu d'évenement à cette heure ci!");
 			}else{
-				
-				System.out.println(moment.toString());
-				System.out.println("Energie:"+Joueur.getBarreEnergie());
-				System.out.println("Popularité:"+Joueur.getBarrePopularite());
-				System.out.println("Résultats:"+Joueur.getBarreResultats());
-				
-				System.out.println("Faites votre choix : (entrez un chiffre)");
-				String str = sc.nextLine();
-				while( str == "1" || str == "2" || str == "3"){
-					if(str == "1"){
-						moment.consequenceChoix1();
+				if(moment.proba > r.nextDouble()){
+					System.out.println(moment.toString());
+					System.out.println("Energie:"+Joueur.getBarreEnergie());
+					System.out.println("Popularité:"+Joueur.getBarrePopularite());
+					System.out.println("Résultats:"+Joueur.getBarreResultats());
+					
+					System.out.println("Faites votre choix : (entrez un chiffre)");
+					String str = sc.nextLine();
+					while( str == "1" || str == "2" || str == "3"){
+						if(str == "1"){
+							moment.consequenceChoix1();
+						}
+						else if(str == "2"){
+							moment.consequenceChoix2();
+						}
+						else {
+							moment.consequenceChoix3();
+						}
+						while(str != "1" || str != "2" || str != "3"){
+							System.out.println("Mettez un chiffre entre 1 et 3");
+							str = sc.nextLine();
+						}
+						sc.nextLine();
 					}
-					else if(str == "2"){
-						moment.consequenceChoix2();
-					}
-					else {
-						moment.consequenceChoix3();
-					}
-					while(str != "1" || str != "2" || str != "3"){
-						System.out.println("Mettez un chiffre entre 1 et 3");
-						str = sc.nextLine();
-					}
-					sc.nextLine();
+					
+				}else{
+					System.out.println("\n Il n'y a pas eu d'évenement à cette heure ci!");
 				}
-				
-			}
 
+			}
+			System.out.flush();
 			//Vérifie la fin
 			if(Fins.getFinactive() != -1){
 				fini=true;
@@ -71,6 +86,6 @@ public class Main {
 			}
 		}while(!fini);
 	}
-	
+
 
 }
