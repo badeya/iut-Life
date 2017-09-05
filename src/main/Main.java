@@ -62,33 +62,30 @@ public class Main {
 					String str="";
 					do{
 						str = sc.nextLine();
-						while(EntierPositifNonVide.entre(str, 1, 3));
-						if(Integer.parseInt(str)==1){
-							moment.consequenceChoix1();
-						}
-						else if(Integer.parseInt(str) == 2){
-							moment.consequenceChoix2();
-						}
-						else if(Integer.parseInt(str) == 3){
-							moment.consequenceChoix3();
-						}
-						while(str != "1" || str != "2" || str != "3"){
-							System.out.println("Mettez un chiffre entre 1 et 3");
-							str = sc.nextLine();
-						}
-						sc.nextLine();
+					}while(!EntierPositifNonVide.entre(str, 1, 3));
+					if(Integer.parseInt(str)==1){
+						moment.consequenceChoix1();
 					}
+					else if(Integer.parseInt(str) == 2){
+						moment.consequenceChoix2();
+					}
+					else if(Integer.parseInt(str) == 3){
+						moment.consequenceChoix3();
+					}
+
+
 				}
-
 			}
-			//Vérifie la fin
-			Joueur.BarreHorsLimites();
+
+		
+		//Vérifie la fin
+		Joueur.BarreHorsLimites();
 
 
-		}while(Fins.getFinactive() == -1);
-		Fins.finDuJeu();
+	}while(Fins.getFinactive() == -1);
+	Fins.finDuJeu();
 
-	}
+}
 
 
 }
