@@ -126,10 +126,20 @@ public class Evenement {
 	
 
 	public String toString(){
-		return this.event+"\n"+
-			   " choix1: "+this.choix1+"\n"+
-			   " choix2: "+this.choix2+"\n"+
-			   " choix3: "+this.choix3+"\n";
+		String resultat;
+		if(nbChoix==3){
+			resultat= this.event+"\n"+
+					   " choix1: "+this.choix1+"\n"+
+					   " choix2: "+this.choix2+"\n"+
+					   " choix3: "+this.choix3+"\n";
+			
+		}
+		else{
+			resultat=this.event+"\n"+
+					   " choix1: "+this.choix1+"\n"+
+					   " choix2: "+this.choix2+"\n";
+		}
+		return resultat;
 	}
 
 	
