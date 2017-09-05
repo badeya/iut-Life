@@ -5,9 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-	private static Barre barreEnergie=new Barre(NomBarre.ENERGIE);
-	private static Barre barrePopularite=new Barre(NomBarre.POPULARITE);
-	private static Barre barreResultats=new Barre(NomBarre.RESULTATS);
+
 	/**
 	 * @param args
 	 */
@@ -25,30 +23,13 @@ public class Main {
 					System.out.println(e.toString());
 				}
 			}
-			System.out.println("Energie:"+getBarreEnergie());
-			System.out.println("Popularité:"+getBarrePopularite());
-			System.out.println("Résultats:"+getBarreResultats());
+			System.out.println("Energie:"+Joueur.getBarreEnergie());
+			System.out.println("Popularité:"+Joueur.getBarrePopularite());
+			System.out.println("Résultats:"+Joueur.getBarreResultats());
 			fini=true;
 			
 		}while(!fini);
 	}
-	public static Barre getBarreEnergie() {
-		return barreEnergie;
-	}
-	public static Barre getBarrePopularite() {
-		return barrePopularite;
-	}
-	public static Barre getBarreResultats() {
-		return barreResultats;
-	}
-	public static void setBarreEnergie(Barre barreEnergie1) {
-		barreEnergie = barreEnergie1;
-	}
-	public static void setBarrePopularite(Barre barrePopularite1) {
-		barrePopularite = barrePopularite1;
-	}
-	public static void setBarreResultats(Barre barreResultats1) {
-		barreResultats = barreResultats1;
-	}
+	
 
 }

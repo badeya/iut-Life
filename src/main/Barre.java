@@ -12,7 +12,7 @@ public class Barre {
 	
 	public String toString(){
 		
-		String res="[";
+		String res="\t [";
 		for(int i=0;i<valeur/5;i++){
 		res+="=";
 		}

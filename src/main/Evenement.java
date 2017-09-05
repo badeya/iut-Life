@@ -68,34 +68,38 @@ public class Evenement {
 	
 	public void consequenceChoix1(){
 		System.out.println("Vous avez choisi "+ this.choix1);
-		Main.getBarreEnergie().setValeur(Main.getBarreEnergie().getValeur()+valeurEneChoix1);
-		Main.getBarrePopularite().setValeur(Main.getBarrePopularite().getValeur()+valeurPopChoix1);
-		Main.getBarreResultats().setValeur(Main.getBarreResultats().getValeur()+valeurResChoix1);
+		Joueur.getBarreEnergie().setValeur(Joueur.getBarreEnergie().getValeur()+valeurEneChoix1);
+		Joueur.getBarrePopularite().setValeur(Joueur.getBarrePopularite().getValeur()+valeurPopChoix1);
+		Joueur.getBarreResultats().setValeur(Joueur.getBarreResultats().getValeur()+valeurResChoix1);
 		
 		
 	}
 	
 	public void consequenceChoix2(){
 		System.out.println("Vous avez choisi "+ this.choix2);
-		Main.getBarreEnergie().setValeur(Main.getBarreEnergie().getValeur()+valeurEneChoix2);
-		Main.getBarrePopularite().setValeur(Main.getBarrePopularite().getValeur()+valeurPopChoix2);
-		Main.getBarreResultats().setValeur(Main.getBarreResultats().getValeur()+valeurResChoix2);
+		Joueur.getBarreEnergie().setValeur(Joueur.getBarreEnergie().getValeur()+valeurEneChoix2);
+		Joueur.getBarrePopularite().setValeur(Joueur.getBarrePopularite().getValeur()+valeurPopChoix2);
+		Joueur.getBarreResultats().setValeur(Joueur.getBarreResultats().getValeur()+valeurResChoix2);
 		
 		
 	}
 	
 	public void consequenceChoix3(){
 		System.out.println("Vous avez choisi "+ this.choix3);
-		Main.getBarreEnergie().setValeur(Main.getBarreEnergie().getValeur()+valeurEneChoix3);
-		Main.getBarrePopularite().setValeur(Main.getBarrePopularite().getValeur()+valeurPopChoix3);
-		Main.getBarreResultats().setValeur(Main.getBarreResultats().getValeur()+valeurResChoix3);
+		Joueur.getBarreEnergie().setValeur(Joueur.getBarreEnergie().getValeur()+valeurEneChoix3);
+		Joueur.getBarrePopularite().setValeur(Joueur.getBarrePopularite().getValeur()+valeurPopChoix3);
+		Joueur.getBarreResultats().setValeur(Joueur.getBarreResultats().getValeur()+valeurResChoix3);
 		
 		
 	}
 	
 
 	public String toString(){
-		return "nom:"+this.event+"choix1:"+this.choix1+"choix2:"+this.choix2+"choix3:"+this.choix3+"valeurPopChoix1:"+this.valeurPopChoix1+"valeurPopChoix2:"+this.valeurPopChoix2+"valeurPopChoix3:"+this.valeurPopChoix3+"valeurEneChoix1:"+this.valeurEneChoix1+"valeurEneChoix2:"+this.valeurEneChoix2+"valeurEneChoix3"+this.valeurEneChoix3+"valeurResChoix1:"+this.valeurResChoix1+"valeurResChoix2:"+this.valeurResChoix2+"valeurResChoix3:"+this.valeurResChoix3+"DateEvenement:"+this.uneDateEvenement;
+		return this.event+"\n"+
+			   " choix1: "+this.choix1+"\n"+
+			   " choix2: "+this.choix2+"\n"+
+			   " choix3: "+this.choix3+"\n"+
+			   " DateEvenement: "+this.uneDateEvenement+"\n";
 	}
 
 	
