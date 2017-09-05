@@ -61,5 +61,9 @@ public class GenerationEvenements {
 	evenements.add(ev19);
 	evenements.add(ev20);
 	}
+
+	public List<Evenement> getEvenements() {
+		return evenements;
+	}
 	
 }
