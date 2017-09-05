@@ -18,7 +18,10 @@ public class TapAXSecondes {
 		sc.nextLine();
 		long fin=System.nanoTime();
 		long diff=fin-depart-(time*1000000000);
-		if(diff<1000000000 && diff>-1000000000){
+		if(diff<0){
+			diff=diff*-1;
+		}
+		if(diff>1000000000){
 			System.out.println("Echec, différence de:"+diff/1000000000.0);
 			return 0;
 		}
