@@ -20,7 +20,6 @@ public class Date {
 		return jour;
 	}
 
-
 	public String getHeure() {
 		return heure;
 	}
