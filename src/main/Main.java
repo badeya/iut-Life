@@ -19,16 +19,30 @@ public class Main {
 		int semaineActuelle=1;
 		int heureActuelle=1;
 
-		List<Evenement> e1 = new ArrayList<Evenement>();
+		GenerationEvenements ge=new GenerationEvenements();
+
+		List<Evenement> e1 = ge.getEvenements();
+
+		
 		
 		do{
+			heureActuelle++;
+			if(heureActuelle>24){
+				jourActuel++;
+				heureActuelle=0;
+			}
+			if(jourActuel==8){
+				jourActuel=1;
+				semaineActuelle++;
+			}
 			System.out.println(new Date(semaineActuelle,jourActuel,heureActuelle).toString());
 			Evenement moment=null;
+			
 			for(Evenement e:e1){
 				if(e.uneDateEvenement.getHeure()==heureActuelle && e.uneDateEvenement.getJour()==jourActuel && e.uneDateEvenement.getSemaine()==semaineActuelle){
-					if(moment.proba > r.nextDouble()){
+					
 					moment=e;
-					}
+				
 				}
 					
 				
@@ -36,7 +50,7 @@ public class Main {
 			if(moment==null){
 				System.out.println("\n Il n'y a pas eu d'évenement à cette heure ci!");
 			}else{
-				
+				if(moment.proba > r.nextDouble()){
 				System.out.println(moment.toString());
 				System.out.println("Energie:"+Joueur.getBarreEnergie());
 				System.out.println("Popularité:"+Joueur.getBarrePopularite());
@@ -59,6 +73,7 @@ public class Main {
 						str = sc.nextLine();
 					}
 					sc.nextLine();
+				}
 				}
 				
 			}
