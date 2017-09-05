@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
+import minijeu.TapAXSecondes;
 import verifSaisie.EntierPositifNonVide;
 
 public class Main {
@@ -15,6 +16,7 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		TapAXSecondes.main(sc);
 		Random r = new Random();
 		boolean fini=false;
 		int jourActuel=1;
@@ -70,7 +72,7 @@ public class Main {
 					String str="";
 					do{
 						str = sc.nextLine();
-					}while(!EntierPositifNonVide.entre(str, 1, 3));
+					}while(!EntierPositifNonVide.entre(str, 1, moment.getNbChoix()));
 					if(Integer.parseInt(str)==1){
 						moment.consequenceChoix1();
 					}

@@ -5,9 +5,8 @@ import java.util.Scanner;
 
 public class TapAXSecondes {
 
-	public static int main(String[] args) {
+	public static int main(Scanner sc) {
 		System.out.println(" +++++++++ MINIJEU ++++++++ ");
-		Scanner sc=new Scanner(System.in);
 		System.out.println();
 		Random r=new Random();
 		int time=r.nextInt(3)+2;
@@ -18,7 +17,6 @@ public class TapAXSecondes {
 		sc.nextLine();
 		long fin=System.nanoTime();
 		long diff=fin-depart;
-		sc.close();
 		if(diff>1000000000){
 			System.out.println("Echec, différence de:"+diff/1000000000.0);
 			return 0;
