@@ -11,6 +11,18 @@ public class Evenement {
 	double valeurResChoix1, valeurResChoix2, valeurResChoix3;
 	int proba; 
 	
+	public Evenement(String nom, String choix1, String choix2,	double valeurPopChoix1, double valeurPopChoix2, double valeurEneChoix1, double valeurEneChoix2,double valeurResChoix1, double valeurResChoix2){
+		event=nom;
+		this.choix1=choix1;
+		this.choix2=choix2;
+		this.valeurEneChoix1=valeurEneChoix1;
+		this.valeurEneChoix2=valeurEneChoix2;
+		this.valeurPopChoix1=valeurPopChoix1;
+		this.valeurPopChoix2=valeurPopChoix2;
+		this.valeurResChoix1=valeurResChoix1;
+		this.valeurResChoix2=valeurResChoix2;
+	}
+	
 	public Evenement(String nom, String choix1, String choix2, String choix3, 	double valeurPopChoix1, double valeurPopChoix2, double valeurPopChoix3,double valeurEneChoix1, double valeurEneChoix2, double valeurEneChoix3,double valeurResChoix1, double valeurResChoix2, double valeurResChoix3, int proba){
 		event=nom;
 		this.choix1=choix1;
