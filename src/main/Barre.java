@@ -30,7 +30,14 @@ public class Barre {
 	}
 
 	public String getNom() {
-		return nom;
+		if(this.nom==nom.Energie){
+			return "Energie";
+			
+		}else if(this.nom==nom.Popularite){
+			return "Popularité";
+		}else{
+			return "Resultat";
+		}
 	}
 
 	public void setValeur(double valeur) {

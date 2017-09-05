@@ -3,14 +3,35 @@ package main;
 
 
 public class Main {
-
+	private static Barre barreEnergie=new Barre(NomBarre.Energie);
+	private static Barre barrePopularite=new Barre(NomBarre.Popularite);
+	private static Barre barreResultats=new Barre(NomBarre.Resultats);
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Barre b1=new Barre("Resultat");
-		System.out.println(b1);
+		
+		Barre barre=getBarreEnergie();
+		System.out.println();
 
+	}
+	public static Barre getBarreEnergie() {
+		return barreEnergie;
+	}
+	public static Barre getBarrePopularite() {
+		return barrePopularite;
+	}
+	public static Barre getBarreResultats() {
+		return barreResultats;
+	}
+	public static void setBarreEnergie(Barre barreEnergie1) {
+		barreEnergie = barreEnergie1;
+	}
+	public static void setBarrePopularite(Barre barrePopularite1) {
+		barrePopularite = barrePopularite1;
+	}
+	public static void setBarreResultats(Barre barreResultats1) {
+		barreResultats = barreResultats1;
 	}
 
 }
