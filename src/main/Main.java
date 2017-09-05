@@ -66,7 +66,7 @@ public class Main {
 					String str="";
 					do{
 						str = sc.nextLine();
-					}while(!EntierPositifNonVide.entre(str, 1, 3));
+					}while(!EntierPositifNonVide.entre(str, 1, moment.getNbChoix()));
 					if(Integer.parseInt(str)==1){
 						moment.consequenceChoix1();
 					}
