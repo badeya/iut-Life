@@ -44,7 +44,7 @@ public class Main {
 			}
 			//System.out.println(new Date(semaineActuelle,jourActuel,heureActuelle).toString());
 			try {
-				Thread.sleep(500);
+				Thread.sleep(100);
 			} catch (InterruptedException e2) {
 				e2.printStackTrace();
 			}
