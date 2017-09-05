@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
+import minijeu.TapAXSecondes;
 import verifSaisie.EntierPositifNonVide;
 
 public class Main {
@@ -15,6 +16,7 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		
 		Random r = new Random();
 		boolean fini=false;
 		int jourActuel=1;
@@ -27,9 +29,10 @@ public class Main {
 
 		List<Evenement> e1 = ge.getEvenements();
 
-
+		System.out.println("IUT - SIMULATOR 2017 \n");
 
 		do{
+			//Mise A jour de date / heure
 			heureActuelle++;
 			if(heureActuelle>23){
 				jourActuel++;
@@ -39,7 +42,7 @@ public class Main {
 				jourActuel=1;
 				semaineActuelle++;
 			}
-			System.out.println(new Date(semaineActuelle,jourActuel,heureActuelle).toString());
+			//System.out.println(new Date(semaineActuelle,jourActuel,heureActuelle).toString());
 			Evenement moment=null;
 
 			for(Evenement e:e1){
@@ -51,9 +54,13 @@ public class Main {
 
 
 			}
-			if(moment==null){
-				System.out.println("\n Il n'y a pas eu d'évenement à cette heure ci!");
-			}else{
+			if(moment!=null){
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException e2) {
+					e2.printStackTrace();
+				}
+				System.out.println(new Date(semaineActuelle,jourActuel,heureActuelle).toString());
 				Double rdm=r.nextDouble();
 				// Debug : System.out.println("L'evenement "+moment.toString()+" proba:"+moment.proba+" Random: "+rdm);
 				if(moment.proba > rdm){
@@ -79,6 +86,14 @@ public class Main {
 
 
 				}
+			}else{
+				//MINIJEU SI PAS D'EVENEMENT
+				Double val=r.nextDouble();
+				if(val<0.05){
+					if(TapAXSecondes.main(sc)==1){
+						Joueur.setBarreEnergie(new Barre(NomBarre.ENERGIE));
+					}
+				}
 			}
 			//Vérifie la fin
 			Joueur.BarreHorsLimites();
@@ -90,11 +105,10 @@ public class Main {
 				
 			}
 		}while(Fins.getFinactive() == -1);
-		
-		System.out.println("\n" + Fins.finDuJeu() + "\n");
 		System.out.println("Energie:"+Joueur.getBarreEnergie());
 		System.out.println("Popularité:"+Joueur.getBarrePopularite());
 		System.out.println("Résultats:"+Joueur.getBarreResultats()+ "\n");
+		System.out.println("\n" + Fins.finDuJeu() + "\n");
 		System.out.println("Tu as survecu " + nbrHeures + " heures avec un score de " + score);
 	}
 	
