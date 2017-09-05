@@ -29,7 +29,7 @@ public class Main {
 
 		List<Evenement> e1 = ge.getEvenements();
 
-
+		System.out.println("IUT - SIMULATOR 2017 \n");
 
 		do{
 			//Mise A jour de date / heure
@@ -43,11 +43,6 @@ public class Main {
 				semaineActuelle++;
 			}
 			//System.out.println(new Date(semaineActuelle,jourActuel,heureActuelle).toString());
-			try {
-				Thread.sleep(100);
-			} catch (InterruptedException e2) {
-				e2.printStackTrace();
-			}
 			Evenement moment=null;
 
 			for(Evenement e:e1){
@@ -60,10 +55,15 @@ public class Main {
 
 			}
 			if(moment!=null){
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException e2) {
+					e2.printStackTrace();
+				}
+				System.out.println(new Date(semaineActuelle,jourActuel,heureActuelle).toString());
 				Double rdm=r.nextDouble();
 				// Debug : System.out.println("L'evenement "+moment.toString()+" proba:"+moment.proba+" Random: "+rdm);
 				if(moment.proba > rdm){
-					System.out.println(new Date(semaineActuelle,jourActuel,heureActuelle).toString());
 					System.out.println(moment.toString());
 					System.out.println("Energie:"+Joueur.getBarreEnergie());
 					System.out.println("Popularité:"+Joueur.getBarrePopularite());
