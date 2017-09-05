@@ -1,10 +1,10 @@
 package main;
 
 public class Barre {
-	double valeur;
-	String nom;
+	private double valeur;
+	private final NomBarre nom;
 	
-	public Barre(String nom) {
+	public Barre(NomBarre nom) {
 		super();
 		this.nom = nom;
 		valeur=50;
@@ -23,6 +23,18 @@ public class Barre {
 		
 		
 		
+	}
+
+	public double getValeur() {
+		return valeur;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setValeur(double valeur) {
+		this.valeur = valeur;
 	}
 	
 	
