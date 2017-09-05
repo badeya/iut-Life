@@ -19,6 +19,7 @@ public class Main {
 		Evenement ev1 = new Evenement("Premier Amphi de l'annee","J'y vais !","J'y vais pas","J'arrive en retard",0,15,30,-10,10,0,20,-20,0,new Date(1,1,1));
 		e1.add(ev1);
 		do{
+			System.out.println(new Date(semaineActuelle,jourActuel,heureActuelle).toString());
 			for(Evenement e:e1){
 				if(e.uneDateEvenement.getHeure()==heureActuelle && e.uneDateEvenement.getJour()==jourActuel && e.uneDateEvenement.getSemaine()==semaineActuelle){
 					System.out.println(e.toString());
@@ -27,8 +28,10 @@ public class Main {
 			System.out.println("Energie:"+Joueur.getBarreEnergie());
 			System.out.println("Popularité:"+Joueur.getBarrePopularite());
 			System.out.println("Résultats:"+Joueur.getBarreResultats());
-			fini=true;
-			
+			//Vérifie la fin
+			if(Joueur.BarreNegative()){
+				fini=true;
+			}
 		}while(!fini);
 	}
 	
