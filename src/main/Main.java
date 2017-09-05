@@ -7,6 +7,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 import minijeu.TapAXSecondes;
+import minijeu.TapTap;
 import verifSaisie.EntierPositifNonVide;
 
 public class Main {
@@ -93,6 +94,11 @@ public class Main {
 					if(TapAXSecondes.main(sc)==1){
 						Joueur.setBarreEnergie(new Barre(NomBarre.ENERGIE));
 					}
+				}else if(val<0.1){
+					if(TapTap.main(sc)>10){
+						Joueur.setBarrePopularite(new Barre(NomBarre.POPULARITE));
+					}
+					
 				}
 			}
 			//Vérifie la fin

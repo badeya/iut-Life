@@ -9,7 +9,7 @@ public class TapTap {
 	public static int main(Scanner sc) {
 		System.out.println(" +++++++++ MINIJEU ++++++++ ");
 		
-		long timefin=5000000000;
+		double timefin=5000000000.0;
 		
 		int cpt=0;
 		
@@ -24,6 +24,10 @@ public class TapTap {
 			
 		}while(System.nanoTime()<depart+timefin);
 		
+		if(cpt>10){
+			System.out.println("vous avez réussi");
+		}else
+			System.out.println("vous avez échoué");
 		
 		return cpt;
 		
