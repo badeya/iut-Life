@@ -63,11 +63,13 @@ public class Main {
 				
 			}
 			//Vérifie la fin
+
 			Joueur.BarreHorsLimites();
 		
 			
 		}while(Fins.getFinactive() == -1);
 		Fins.finDuJeu();
+
 	}
 	
 
