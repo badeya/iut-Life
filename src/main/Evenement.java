@@ -9,9 +9,11 @@ public class Evenement {
 	double valeurPopChoix1, valeurPopChoix2, valeurPopChoix3; 
 	double valeurEneChoix1, valeurEneChoix2, valeurEneChoix3;
 	double valeurResChoix1, valeurResChoix2, valeurResChoix3;
-	int proba; 
+	int proba;
+	Date uneDateEvenement;
 	
-	public Evenement(String nom, String choix1, String choix2,	double valeurPopChoix1, double valeurPopChoix2, double valeurEneChoix1, double valeurEneChoix2,double valeurResChoix1, double valeurResChoix2){
+
+	public Evenement(String nom, String choix1, String choix2,	double valeurPopChoix1, double valeurPopChoix2, double valeurEneChoix1, double valeurEneChoix2,double valeurResChoix1, double valeurResChoix2, Date date){
 		event=nom;
 		this.choix1=choix1;
 		this.choix2=choix2;
@@ -21,9 +23,10 @@ public class Evenement {
 		this.valeurPopChoix2=valeurPopChoix2;
 		this.valeurResChoix1=valeurResChoix1;
 		this.valeurResChoix2=valeurResChoix2;
+		this.uneDateEvenement=date;
 	}
 	
-	public Evenement(String nom, String choix1, String choix2, String choix3, 	double valeurPopChoix1, double valeurPopChoix2, double valeurPopChoix3,double valeurEneChoix1, double valeurEneChoix2, double valeurEneChoix3,double valeurResChoix1, double valeurResChoix2, double valeurResChoix3, int proba){
+	public Evenement(String nom, String choix1, String choix2, String choix3, 	double valeurPopChoix1, double valeurPopChoix2, double valeurPopChoix3,double valeurEneChoix1, double valeurEneChoix2, double valeurEneChoix3,double valeurResChoix1, double valeurResChoix2, double valeurResChoix3, int proba, Date uneDateEvenement){
 		event=nom;
 		this.choix1=choix1;
 		this.choix2=choix2;
@@ -37,12 +40,13 @@ public class Evenement {
 		this.valeurResChoix1=valeurResChoix1;
 		this.valeurResChoix2=valeurResChoix2;
 		this.valeurResChoix3=valeurResChoix3;
+		this.uneDateEvenement=uneDateEvenement;
 		
 		if(proba <=1 && proba >= 0)
 		this.proba = proba;
 	}
 	
-	public Evenement(String nom, String choix1, String choix2, String choix3, 	double valeurPopChoix1, double valeurPopChoix2, double valeurPopChoix3,double valeurEneChoix1, double valeurEneChoix2, double valeurEneChoix3,double valeurResChoix1, double valeurResChoix2, double valeurResChoix3){
+	public Evenement(String nom, String choix1, String choix2, String choix3, 	double valeurPopChoix1, double valeurPopChoix2, double valeurPopChoix3,double valeurEneChoix1, double valeurEneChoix2, double valeurEneChoix3,double valeurResChoix1, double valeurResChoix2, double valeurResChoix3, Date date){
 		event=nom;
 		this.choix1=choix1;
 		this.choix2=choix2;
@@ -56,6 +60,7 @@ public class Evenement {
 		this.valeurResChoix1=valeurResChoix1;
 		this.valeurResChoix2=valeurResChoix2;
 		this.valeurResChoix3=valeurResChoix3;
+		this.uneDateEvenement=date; 
 	}
 	
 	public void consequenceChoix1(){
