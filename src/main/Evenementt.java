@@ -48,7 +48,7 @@ public class Evènement {
 	
 	public void consequenceChoix1(){
 		System.out.println("Vous avez choisi "+ this.choix1);
-		
+		Barre barre = new Barre(NomBarre.ENERGIE);
 	}
 	
 }
