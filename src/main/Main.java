@@ -16,8 +16,17 @@ public class Main {
 		int jourActuel=1;
 		int semaineActuelle=1;
 		int heureActuelle=0;
-		List e1 = new ArrayList<Evenement>();
+		List<Evenement> e1 = new ArrayList<Evenement>();
 		do{
+			for(Evenement e:e1){
+				if(e.uneDateEvenement.getHeure()==heureActuelle && e.uneDateEvenement.getJour()==jourActuel && e.uneDateEvenement.getSemaine()==semaineActuelle){
+					
+				}
+			}
+			System.out.println("Energie:"+getBarreEnergie());
+			System.out.println("Popularité:"+getBarrePopularite());
+			System.out.println("Résultats:"+getBarreResultats());
+			fini=true;
 			
 		}while(!fini);
 		System.out.println();
