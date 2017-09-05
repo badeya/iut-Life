@@ -9,11 +9,11 @@ public class GenerationEvenements {
 	
 	public GenerationEvenements() {
 		
-	Evenement ev1 = new Evenement("Premier Amphi de l'année","J'y vais !","J'y vais pas","J'arrive en retard",0,15,30,-10,10,0,20,-20,0,new Date(1,1,13));
-	Evenement ev2 = new Evenement("Soirée de reprise !","J'y vais !","J'y vais pas",30,-25,-15,15,-15,0,new Date(1,1,20));
-	Evenement ev3 = new Evenement("Pause Midi","Sandwich ?","Box de pâtes ?",0,0,10,20,0,-5,new Date(1,2,12));
-	Evenement ev4 = new Evenement("Sport de la semaine","J'y vais","J'y vais pas",5,0,-30,25,10,15,new Date(1,2,17));
-	Evenement ev5 = new Evenement("Deuxième Amphi de l'annee","J'y vais !","J'y vais pas","J'arrive en retard",0,15,30,-10,10,0,20,-20,0,new Date(1,3,13));
+	Evenement ev1 = new Evenement("Premier Amphi de l'année","J'y vais !","J'y vais pas","J'arrive en retard",0,15,20,-10,10,10,10,-15,0,new Date(1,1,13));
+	Evenement ev2 = new Evenement("Soirée de reprise !","J'y vais !","J'y vais pas",20,-25,-15,15,-15,0,new Date(1,1,20));
+	Evenement ev3 = new Evenement("Pause Midi","Sandwich ?","Box de pâtes ?",0,0,10,20,0,0,new Date(1,2,12));
+	Evenement ev4 = new Evenement("Sport de la semaine","J'y vais","J'y vais pas",5,0,-20,20,10,0,new Date(1,2,17));
+	Evenement ev5 = new Evenement("Deuxième Amphi de l'annee","J'y vais !","J'y vais pas","J'arrive en retard",0,15,20,-10,10,10,10,-15,0,new Date(1,3,13));
 	Evenement ev6 = new Evenement("Intégration de l'IUT ce soir, mais y'a un DS demain...","J'y vais tant pis pour le DS","Je reste réviser chez moi","Je me bourre à fond",20,-10,15,-15,0,-20,-10,15,-15,0.4,new Date(1,3,21));
 	Evenement ev7 = new Evenement("Premier DS de l'année","Je révise à fond","Je révise moyen","Le talent !",-5,5,15,-30,-15,15,60,35,-50,new Date(1,4,14));
 	Evenement ev22 = new Evenement("Le métro est en panne, tu as cours de web avec Carle","C'était le destin, je rentre chez moi","Je ne peux pas me passer des cours de web,j'y vais à poney",10,10,15,-15,-10,15,0.7,new Date(1,4,8));
