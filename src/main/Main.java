@@ -10,8 +10,13 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		
-		Barre barre=getBarreEnergie();
+		boolean fini=false;
+		int jourActuel=1;
+		int semaineActuelle=1;
+		int heureActuelle=0;
+		do{
+			
+		}while(!fini);
 		System.out.println();
 
 	}
