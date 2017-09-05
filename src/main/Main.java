@@ -12,7 +12,6 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-<<<<<<< HEAD
 		boolean fini=false;
 		int jourActuel=1;
 		int semaineActuelle=1;
