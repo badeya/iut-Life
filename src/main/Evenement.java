@@ -11,10 +11,12 @@ public class Evenement {
 	double valeurResChoix1, valeurResChoix2, valeurResChoix3;
 	double proba=1.0;
 	Date uneDateEvenement;
+	int nbChoix=0;
 	
 	//Evenement aléatoire à deux choix
 	public Evenement(String nom, String choix1, String choix2,	double valeurPopChoix1, double valeurPopChoix2, double valeurEneChoix1, double valeurEneChoix2,double valeurResChoix1, double valeurResChoix2, double proba,Date date){
 		event=nom;
+		nbChoix=2;
 		this.choix1=choix1;
 		this.choix2=choix2;
 		this.valeurEneChoix1=valeurEneChoix1;
@@ -33,6 +35,7 @@ public class Evenement {
 	//Evenement non aléatoire à deux choix
 	public Evenement(String nom, String choix1, String choix2,	double valeurPopChoix1, double valeurPopChoix2, double valeurEneChoix1, double valeurEneChoix2,double valeurResChoix1, double valeurResChoix2, Date date){
 		event=nom;
+		nbChoix=2;
 		this.choix1=choix1;
 		this.choix2=choix2;
 		this.valeurEneChoix1=valeurEneChoix1;
@@ -48,6 +51,7 @@ public class Evenement {
 	//Evenement aléatoire à trois choix
 	public Evenement(String nom, String choix1, String choix2, String choix3, 	double valeurPopChoix1, double valeurPopChoix2, double valeurPopChoix3,double valeurEneChoix1, double valeurEneChoix2, double valeurEneChoix3,double valeurResChoix1, double valeurResChoix2, double valeurResChoix3, double proba, Date uneDateEvenement){
 		event=nom;
+		nbChoix=3;
 		this.choix1=choix1;
 		this.choix2=choix2;
 		this.choix3=choix3;
@@ -71,6 +75,7 @@ public class Evenement {
 	//evenement non aléatoire à trois choix
 	public Evenement(String nom, String choix1, String choix2, String choix3, 	double valeurPopChoix1, double valeurPopChoix2, double valeurPopChoix3,double valeurEneChoix1, double valeurEneChoix2, double valeurEneChoix3,double valeurResChoix1, double valeurResChoix2, double valeurResChoix3, Date uneDateEvenement){
 		event=nom;
+		nbChoix=3;
 		this.choix1=choix1;
 		this.choix2=choix2;
 		this.choix3=choix3;
@@ -88,6 +93,10 @@ public class Evenement {
 
 	}
 	
+	public int getNbChoix() {
+		return nbChoix;
+	}
+
 	public void consequenceChoix1(){
 		System.out.println("Vous avez choisi "+ this.choix1);
 		Joueur.getBarreEnergie().setValeur(Joueur.getBarreEnergie().getValeur()+valeurEneChoix1);
@@ -117,10 +126,20 @@ public class Evenement {
 	
 
 	public String toString(){
-		return this.event+"\n"+
-			   " choix1: "+this.choix1+"\n"+
-			   " choix2: "+this.choix2+"\n"+
-			   " choix3: "+this.choix3+"\n";
+		String resultat;
+		if(nbChoix==3){
+			resultat= this.event+"\n"+
+					   " choix1: "+this.choix1+"\n"+
+					   " choix2: "+this.choix2+"\n"+
+					   " choix3: "+this.choix3+"\n";
+			
+		}
+		else{
+			resultat=this.event+"\n"+
+					   " choix1: "+this.choix1+"\n"+
+					   " choix2: "+this.choix2+"\n";
+		}
+		return resultat;
 	}
 
 	
