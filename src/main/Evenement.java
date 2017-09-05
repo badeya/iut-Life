@@ -46,7 +46,8 @@ public class Evenement {
 		this.proba = proba;
 	}
 	
-	public Evenement(String nom, String choix1, String choix2, String choix3, 	double valeurPopChoix1, double valeurPopChoix2, double valeurPopChoix3,double valeurEneChoix1, double valeurEneChoix2, double valeurEneChoix3,double valeurResChoix1, double valeurResChoix2, double valeurResChoix3, Date date){
+
+	public Evenement(String nom, String choix1, String choix2, String choix3, 	double valeurPopChoix1, double valeurPopChoix2, double valeurPopChoix3,double valeurEneChoix1, double valeurEneChoix2, double valeurEneChoix3,double valeurResChoix1, double valeurResChoix2, double valeurResChoix3, Date uneDateEvenement){
 		event=nom;
 		this.choix1=choix1;
 		this.choix2=choix2;
@@ -60,7 +61,9 @@ public class Evenement {
 		this.valeurResChoix1=valeurResChoix1;
 		this.valeurResChoix2=valeurResChoix2;
 		this.valeurResChoix3=valeurResChoix3;
-		this.uneDateEvenement=date; 
+
+		this.uneDateEvenement=uneDateEvenement;
+
 	}
 	
 	public void consequenceChoix1(){

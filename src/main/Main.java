@@ -12,8 +12,15 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-
+		boolean fini=false;
+		int jourActuel=1;
+		int semaineActuelle=1;
+		int heureActuelle=0;
 		List e1 = new ArrayList<Evenement>();
+		do{
+			
+		}while(!fini);
+		System.out.println();
 		Barre barre=getBarreEnergie();
 		System.out.println(barre);
 

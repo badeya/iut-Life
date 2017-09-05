@@ -30,10 +30,10 @@ public class Barre {
 	}
 
 	public String getNom() {
-		if(this.nom==nom.Energie){
+		if(this.nom==NomBarre.ENERGIE){
 			return "Energie";
 			
-		}else if(this.nom==nom.Popularite){
+		}else if(this.nom==NomBarre.POPULARITE){
 			return "Popularité";
 		}else{
 			return "Resultat";
