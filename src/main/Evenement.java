@@ -120,8 +120,7 @@ public class Evenement {
 		return this.event+"\n"+
 			   " choix1: "+this.choix1+"\n"+
 			   " choix2: "+this.choix2+"\n"+
-			   " choix3: "+this.choix3+"\n"+
-			   this.uneDateEvenement+"\n";
+			   " choix3: "+this.choix3+"\n";
 	}
 
 	
