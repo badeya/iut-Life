@@ -9,7 +9,7 @@ public class Evenement {
 	double valeurPopChoix1, valeurPopChoix2, valeurPopChoix3; 
 	double valeurEneChoix1, valeurEneChoix2, valeurEneChoix3;
 	double valeurResChoix1, valeurResChoix2, valeurResChoix3;
-	int proba;
+	double proba;
 	Date uneDateEvenement;
 	
 
@@ -26,7 +26,7 @@ public class Evenement {
 		this.uneDateEvenement=date;
 	}
 	
-	public Evenement(String nom, String choix1, String choix2, String choix3, 	double valeurPopChoix1, double valeurPopChoix2, double valeurPopChoix3,double valeurEneChoix1, double valeurEneChoix2, double valeurEneChoix3,double valeurResChoix1, double valeurResChoix2, double valeurResChoix3, int proba, Date uneDateEvenement){
+	public Evenement(String nom, String choix1, String choix2, String choix3, 	double valeurPopChoix1, double valeurPopChoix2, double valeurPopChoix3,double valeurEneChoix1, double valeurEneChoix2, double valeurEneChoix3,double valeurResChoix1, double valeurResChoix2, double valeurResChoix3, double proba, Date uneDateEvenement){
 		event=nom;
 		this.choix1=choix1;
 		this.choix2=choix2;
@@ -99,7 +99,7 @@ public class Evenement {
 			   " choix1: "+this.choix1+"\n"+
 			   " choix2: "+this.choix2+"\n"+
 			   " choix3: "+this.choix3+"\n"+
-			   " DateEvenement: "+this.uneDateEvenement+"\n";
+			   this.uneDateEvenement+"\n";
 	}
 
 	
