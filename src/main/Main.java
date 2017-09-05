@@ -54,7 +54,9 @@ public class Main {
 			if(moment==null){
 				System.out.println("\n Il n'y a pas eu d'évenement à cette heure ci!");
 			}else{
-				if(moment.proba > r.nextDouble()){
+				Double rdm=r.nextDouble();
+				// Debug : System.out.println("L'evenement "+moment.toString()+" proba:"+moment.proba+" Random: "+rdm);
+				if(moment.proba > rdm){
 					System.out.println(moment.toString());
 					System.out.println("Energie:"+Joueur.getBarreEnergie());
 					System.out.println("Popularité:"+Joueur.getBarrePopularite());
