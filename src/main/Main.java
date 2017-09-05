@@ -15,9 +15,21 @@ public class Main {
 		boolean fini=false;
 		int jourActuel=1;
 		int semaineActuelle=1;
-		int heureActuelle=0;
-		List e1 = new ArrayList<Evenement>();
+		int heureActuelle=1;
+
+		List<Evenement> e1 = new ArrayList<Evenement>();
+		Evenement ev1 = new Evenement("Premier Amphi de l'annee","J'y vais !","J'y vais pas","J'arrive en retard",0,15,30,-10,10,0,20,-20,0,new Date(1,1,1));
+		e1.add(ev1);
 		do{
+			for(Evenement e:e1){
+				if(e.uneDateEvenement.getHeure()==heureActuelle && e.uneDateEvenement.getJour()==jourActuel && e.uneDateEvenement.getSemaine()==semaineActuelle){
+					
+				}
+			}
+			System.out.println("Energie:"+getBarreEnergie());
+			System.out.println("Popularité:"+getBarrePopularite());
+			System.out.println("Résultats:"+getBarreResultats());
+			fini=true;
 			
 		}while(!fini);
 		System.out.println();
