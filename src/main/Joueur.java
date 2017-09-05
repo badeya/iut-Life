@@ -22,4 +22,7 @@ public class Joueur {
 	public static void setBarreResultats(Barre barreResultats1) {
 		barreResultats = barreResultats1;
 	}
+	public static boolean BarreNegative(){
+		return (getBarreEnergie().getValeur()<=0 || getBarrePopularite().getValeur()<=0 || getBarreResultats().getValeur()<=0);
+	}
 }
