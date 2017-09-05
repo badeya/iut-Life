@@ -82,8 +82,7 @@ public class Main {
 			Joueur.BarreHorsLimites();
 			nbrHeures++;
 			if(Joueur.getBarreEnergie().getValeur()+Joueur.getBarrePopularite().getValeur()+Joueur.getBarreResultats().getValeur()>150) score=Joueur.getBarreEnergie().getValeur()+Joueur.getBarrePopularite().getValeur()+Joueur.getBarreResultats().getValeur()-150;
-			if(Joueur.getBarreEnergie().getValeur()+Joueur.getBarrePopularite().getValeur()+Joueur.getBarreResultats().getValeur()<150) score=150-Joueur.getBarreEnergie().getValeur()+Joueur.getBarrePopularite().getValeur()+Joueur.getBarreResultats().getValeur();
-			if(nbrHeures==14) score=score/2;
+			else if(Joueur.getBarreEnergie().getValeur()+Joueur.getBarrePopularite().getValeur()+Joueur.getBarreResultats().getValeur()<150) score=150-Joueur.getBarreEnergie().getValeur()+Joueur.getBarrePopularite().getValeur()+Joueur.getBarreResultats().getValeur();
 			if (jourActuel == 7 && semaineActuelle == 2 && heureActuelle == 23) {
 				Fins.setFinactive(1);
 				
@@ -91,6 +90,9 @@ public class Main {
 		}while(Fins.getFinactive() == -1);
 		
 		System.out.println(Fins.finDuJeu());
+		System.out.println("Energie:"+Joueur.getBarreEnergie());
+		System.out.println("Popularité:"+Joueur.getBarrePopularite());
+		System.out.println("Résultats:"+Joueur.getBarreResultats());
 		System.out.println("Tu as survecu " + nbrHeures + " heures avec un score de " + score);
 	}
 	
