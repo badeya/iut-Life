@@ -24,7 +24,7 @@ public class GenerationEvenements {
 	Evenement evAlea3 = new Evenement("Le prof a 1h00 de retard","J'attend ","je rentre chez moi","Je scanne les cours de mon copain",0,70,32,-70,0,-14,26,-30,-18,0.2,new Date(2,2,13));
 	Evenement evAlea4 = new Evenement("Le ru est fermé","Je vais à Auchan m'acheter un sandwich et j'arrive en retard en cours ","je ne mange pas","Je mange un reste de biscuit retrouvé dans mon sac",0,70,32,-70,0,-14,26,-30,-18,0.2,new Date(1,3,12));
 	Evenement evAlea5 = new Evenement("pain au chocolat ou chocolatine ?","pain chocolat","chocolatine ","je prefere les croissants",0,70,32,-70,0,-14,26,-30,-18,0.2,new Date(1,4,10));
-	Evenement evAlea6 = new Evenement("panne de reveil","je cours pour être à l'heure et j'arrive en pyjama","je reste dans mon lit ppp ce n'est pas important  ",0,70,-70,0,26,-30,0.2,new Date(1,2,8));
+	Evenement evAlea6 = new Evenement("panne de reveil","je cours pour être à l'heure et j'arrive en pyjama","je reste dans mon lit ppp ce n'est pas important  ",0,70,-70,0,26,-30,0.001,new Date(1,2,8));
 	Evenement evAlea7 = new Evenement("mon pote m'appel pour boire un verre","ça finit à 5h00 du mat et me fait arreter par les flics","j'y vais mais je boit de la grenadine ",0,70,-70,0,26,-30,0.2,new Date(1,4,20));
 	Evenement evAlea8 = new Evenement("tempête de neige","je viens en traineau","le metro doit être en panne je reste chez moi ",0,70,-70,0,26,-30,0.2,new Date(1,2,8));
 	Evenement evAlea9 = new Evenement("j'ai cassé ma clef dans ma serrure","je reste chez moi","je previens l'iut ",0,70,-70,0,26,-30,0.2,new Date(1,5,8));
