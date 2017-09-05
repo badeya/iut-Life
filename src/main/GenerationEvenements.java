@@ -20,7 +20,7 @@ public class GenerationEvenements {
 	Evenement ev8= new Evenement("Pause midi ! Kiosque ou RU ?","Kiosque","RU",0,0,-5,-10,-15,20,new Date(1,5,12));
 	Evenement ev9 = new Evenement("Troisième amphi ! Interro Surprise !","Ouf j'y étais","Merde, j'ai seche",0,10,0,10,20,-40,new Date(1,6,9));
 	Evenement ev10 = new Evenement("Pause Midi ! Sandwich oublie","Je taxe un pote","Tant pis",0,0,5,-5,0,-5,new Date(1,6,12));
-	Evenement ev11 = new Evenement("Soiree de ouf mec","Je me défonce comme jaja","Soyons raisonnable",0,40,-100,-30,0,-10,new Date(1,7,18));
+	Evenement ev11 = new Evenement("Soiree de ouf mec","Je me défonce comme jaja","Soyons raisonnable",40,0,-100,-10,0,-10,new Date(1,7,18));
 
 	Evenement evAlea1 = new Evenement("TP d'Algo mon PC crache","Je vais voir le technicien","Tant pis pas de TP","Je le ferais plus tard",0,15,10,-20,15,-10,0,-10,-5,0.1,new Date(2,1,13));
 	Evenement evAlea2 = new Evenement("Panne electrique dans l'IUT","J'attends ","Je rentre chez moi","Je scanne les cours de mon copain",-10,35,10,-35,20,-14,25,-20,-5,0.5,new Date(1,5,14));
