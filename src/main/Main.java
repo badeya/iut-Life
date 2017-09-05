@@ -64,8 +64,10 @@ public class Main {
 			}
 
 			//Vérifie la fin
-			if(Joueur.BarreNegative()){
+			if(Fins.getFinactive() != -1){
 				fini=true;
+				Joueur.BarreHorsLimites();
+				System.out.println(Fins.finDuJeu());
 			}
 		}while(!fini);
 	}
