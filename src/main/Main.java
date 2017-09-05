@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
+import verifSaisie.EntierPositifNonVide;
+
 public class Main {
 
 	/**
@@ -25,11 +27,11 @@ public class Main {
 
 		List<Evenement> e1 = ge.getEvenements();
 
-		
-		
+
+
 		do{
 			heureActuelle++;
-			if(heureActuelle>24){
+			if(heureActuelle>23){
 				jourActuel++;
 				heureActuelle=0;
 			}
@@ -39,45 +41,42 @@ public class Main {
 			}
 			System.out.println(new Date(semaineActuelle,jourActuel,heureActuelle).toString());
 			Evenement moment=null;
-			
+
 			for(Evenement e:e1){
 				if(e.uneDateEvenement.getHeure()==heureActuelle && e.uneDateEvenement.getJour()==jourActuel && e.uneDateEvenement.getSemaine()==semaineActuelle){
-					
+
 					moment=e;
-				
+
 				}
-					
-				
+
+
 			}
 			if(moment==null){
 				System.out.println("\n Il n'y a pas eu d'évenement à cette heure ci!");
 			}else{
 				if(moment.proba > r.nextDouble()){
-				System.out.println(moment.toString());
-				System.out.println("Energie:"+Joueur.getBarreEnergie());
-				System.out.println("Popularité:"+Joueur.getBarrePopularite());
-				System.out.println("Résultats:"+Joueur.getBarreResultats());
-				
-				System.out.println("Faites votre choix : (entrez un chiffre)");
-				String str = sc.nextLine();
-				while( str == "1" || str == "2" || str == "3"){
-					if(str == "1"){
+					System.out.println(moment.toString());
+					System.out.println("Energie:"+Joueur.getBarreEnergie());
+					System.out.println("Popularité:"+Joueur.getBarrePopularite());
+					System.out.println("Résultats:"+Joueur.getBarreResultats());
+
+					System.out.println("Faites votre choix : (entrez un chiffre)");
+					String str="";
+					do{
+						str = sc.nextLine();
+					}while(!EntierPositifNonVide.entre(str, 1, 3));
+					if(Integer.parseInt(str)==1){
 						moment.consequenceChoix1();
 					}
-					else if(str == "2"){
+					else if(Integer.parseInt(str) == 2){
 						moment.consequenceChoix2();
 					}
-					else {
+					else if(Integer.parseInt(str) == 3){
 						moment.consequenceChoix3();
 					}
-					while(str != "1" || str != "2" || str != "3"){
-						System.out.println("Mettez un chiffre entre 1 et 3");
-						str = sc.nextLine();
-					}
-					sc.nextLine();
+
+
 				}
-				}
-				
 			}
 			//Vérifie la fin
 			Joueur.BarreHorsLimites();
@@ -85,7 +84,10 @@ public class Main {
 			if(Joueur.getBarreEnergie().getValeur()+Joueur.getBarrePopularite().getValeur()+Joueur.getBarreResultats().getValeur()>150) score=Joueur.getBarreEnergie().getValeur()+Joueur.getBarrePopularite().getValeur()+Joueur.getBarreResultats().getValeur()-150;
 			if(Joueur.getBarreEnergie().getValeur()+Joueur.getBarrePopularite().getValeur()+Joueur.getBarreResultats().getValeur()<150) score=150-Joueur.getBarreEnergie().getValeur()+Joueur.getBarrePopularite().getValeur()+Joueur.getBarreResultats().getValeur();
 			if(nbrJours==14) score=score/2;
-			
+			if (jourActuel == 7 && semaineActuelle == 2 && heureActuelle == 23) {
+				Fins.setFinactive(1);
+				
+			}
 		}while(Fins.getFinactive() == -1);
 		
 		Fins.finDuJeu();
