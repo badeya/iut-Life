@@ -91,10 +91,10 @@ public class Main {
 			}
 		}while(Fins.getFinactive() == -1);
 		
-		System.out.println(Fins.finDuJeu());
+		System.out.println("\n" + Fins.finDuJeu() + "\n");
 		System.out.println("Energie:"+Joueur.getBarreEnergie());
 		System.out.println("Popularité:"+Joueur.getBarrePopularite());
-		System.out.println("Résultats:"+Joueur.getBarreResultats());
+		System.out.println("Résultats:"+Joueur.getBarreResultats()+ "\n");
 		System.out.println("Tu as survecu " + nbrHeures + " heures avec un score de " + score);
 	}
 	
