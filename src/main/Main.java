@@ -79,7 +79,7 @@ public class Main {
 			}
 			System.out.flush();
 			//Vérifie la fin
-			if(Joueur.BarreNegative()){
+			if(Fins.getFinactive()!=-1){
 				fini=true;
 			}
 		}while(!fini);
