@@ -20,7 +20,7 @@ public class Main {
 		int jourActuel=1;
 		int semaineActuelle=1;
 		int heureActuelle=1;
-		int nbrJours=0;
+		int nbrHeures=0;
 		double score=0;
 
 		GenerationEvenements ge=new GenerationEvenements();
@@ -80,18 +80,20 @@ public class Main {
 			}
 			//Vérifie la fin
 			Joueur.BarreHorsLimites();
-			nbrJours++;
+			nbrHeures++;
 			if(Joueur.getBarreEnergie().getValeur()+Joueur.getBarrePopularite().getValeur()+Joueur.getBarreResultats().getValeur()>150) score=Joueur.getBarreEnergie().getValeur()+Joueur.getBarrePopularite().getValeur()+Joueur.getBarreResultats().getValeur()-150;
-			if(Joueur.getBarreEnergie().getValeur()+Joueur.getBarrePopularite().getValeur()+Joueur.getBarreResultats().getValeur()<150) score=150-Joueur.getBarreEnergie().getValeur()+Joueur.getBarrePopularite().getValeur()+Joueur.getBarreResultats().getValeur();
-			if(nbrJours==14) score=score/2;
+			else if(Joueur.getBarreEnergie().getValeur()+Joueur.getBarrePopularite().getValeur()+Joueur.getBarreResultats().getValeur()<150) score=150-Joueur.getBarreEnergie().getValeur()+Joueur.getBarrePopularite().getValeur()+Joueur.getBarreResultats().getValeur();
 			if (jourActuel == 7 && semaineActuelle == 2 && heureActuelle == 23) {
 				Fins.setFinactive(1);
 				
 			}
 		}while(Fins.getFinactive() == -1);
 		
-		Fins.finDuJeu();
-		System.out.println("Tu as survecu " + nbrJours + "jours avec un score de " + score);
+		System.out.println(Fins.finDuJeu());
+		System.out.println("Energie:"+Joueur.getBarreEnergie());
+		System.out.println("Popularité:"+Joueur.getBarrePopularite());
+		System.out.println("Résultats:"+Joueur.getBarreResultats());
+		System.out.println("Tu as survecu " + nbrHeures + " heures avec un score de " + score);
 	}
 	
 
