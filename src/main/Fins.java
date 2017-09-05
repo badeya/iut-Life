@@ -12,7 +12,7 @@ public class Fins {
 		Fins.finactive = finactive;
 	}
 
-	public String finDuJeu() {
+	public static String finDuJeu() {
 		if (finactive == 1) {
 			return "Bravo ! Tu as survécu à deux semaines, bonne chance pour les 34 restantes !";
 		}
@@ -35,6 +35,4 @@ public class Fins {
 			return "Tu es beaucoup trop chaud, Mr Secq t'envoie en école d'ingé, RIP";
 		}
 	}
-}
-
 }
