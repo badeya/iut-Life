@@ -9,23 +9,27 @@ public class TapAXSecondes {
 		System.out.println(" +++++++++ MINIJEU ++++++++ ");
 		System.out.println();
 		Random r=new Random();
-		int time=r.nextInt(3)+2;
-		System.out.println("Il vous faut taper sur entrée 2 fois d'affilée à "+time+" secondes d'intervalle!");
+		long time=((long)r.nextInt(3)+2)*1000000000;
+		System.out.println("Il vous faut taper sur entrée 2 fois d'affilée à "+time/1000000000+" secondes d'intervalle!");
 		System.out.println("Si tu réussi, Tu réinitialise ta barre d'energie!");
 		System.out.println("Appuyez dès que vous êtes pret!");
 		sc.nextLine();
 		long depart=System.nanoTime();
 		sc.nextLine();
 		long fin=System.nanoTime();
-		long diff=fin-depart-(time*1000000000);
+		long diff=fin-depart;
 		if(diff<0){
 			diff=diff*-1;
 		}
-		if(diff>1000000000){
-			System.out.println("Echec, différence de:"+diff/1000000000.0);
+		
+		if(diff>time+1000000000){
+			System.out.println("Echec, temps:"+diff/1000000000.0);
+			return 0;
+		}else if(diff<time-1000000000){
+			System.out.println("Echec, temps:"+diff/1000000000.0);
 			return 0;
 		}
-		System.out.println("Réussite! Différence de:"+diff/1000000000.0);
+		System.out.println("Réussite! Temps:"+diff/1000000000.0);
 		return 1;
 
 	}
