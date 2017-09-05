@@ -17,6 +17,8 @@ public class Main {
 		int semaineActuelle=1;
 		int heureActuelle=0;
 		List e1 = new ArrayList<Evenement>();
+		Evenement ev1 = new Evenement("Premier Amphi de l'annee","J'y vais !","J'y vais pas","J'arrive en retard",0,15,30,-10,10,0,20,-20,0,new Date(1,1,1));
+		e1.add(ev1);
 		do{
 			
 		}while(!fini);
