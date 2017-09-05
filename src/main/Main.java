@@ -16,7 +16,7 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		TapAXSecondes.main(sc);
+		
 		Random r = new Random();
 		boolean fini=false;
 		int jourActuel=1;
@@ -32,6 +32,7 @@ public class Main {
 		System.out.println("IUT - SIMULATOR 2017 \n");
 
 		do{
+			//Mise A jour de date / heure
 			heureActuelle++;
 			if(heureActuelle>23){
 				jourActuel++;
@@ -84,6 +85,14 @@ public class Main {
 					}
 
 
+				}
+			}else{
+				//MINIJEU SI PAS D'EVENEMENT
+				Double val=r.nextDouble();
+				if(val<0.05){
+					if(TapAXSecondes.main(sc)==1){
+						Joueur.setBarreEnergie(new Barre(NomBarre.ENERGIE));
+					}
 				}
 			}
 			//Vérifie la fin
