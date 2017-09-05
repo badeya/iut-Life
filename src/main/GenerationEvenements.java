@@ -22,6 +22,11 @@ public class GenerationEvenements {
 	Evenement evAlea1 = new Evenement("TP d'Algo mon PC Crache","Je vais voir le technicien","tant pis pas de TP","Je le ferais plus tard",0,20,12,-50,10,-20,0,-10,-5,0.1,new Date(1,1,12));
 	Evenement evAlea2 = new Evenement("Panne electrique dans l'IUT","J'attend ","je rentre chez moi","Je scanne les cours de mon copain",0,70,32,-70,0,-14,26,-30,-18,0.5,new Date(1,6,20));
 	Evenement evAlea3 = new Evenement("Le prof a 1h00 de retard","J'attend ","je rentre chez moi","Je scanne les cours de mon copain",0,70,32,-70,0,-14,26,-30,-18,0.2,new Date(1,7,13));
+	Evenement evAlea4 = new Evenement("Le ru est fermé","Je vais à Auchan m'acheter un sandwitch et j'arrive en retard en cours ","je ne mange pas","Je mange un reste de biscuit retrouvé dans mon sac",0,70,32,-70,0,-14,26,-30,-18,0.2,new Date(1,7,13));
+	Evenement evAlea5 = new Evenement("pain au chocolat ou chocolatine ?","pain chocolat","chocolatine ","je prefere les croissants",0,70,32,-70,0,-14,26,-30,-18,0.2,new Date(1,7,13));
+	Evenement evAlea6 = new Evenement("panne de reveil","je cours pour être à l'heure et j'arrive en pyjama","je reste dans mon lit ppp ce n'est pas important  ",0,70,-70,0,26,-30,0.2,new Date(1,7,13));
+	Evenement evAlea7 = new Evenement("mon pote m'appel pour boire un verre","ça finit à 5h00 du mat et me fait arreter par les flics","j'y vais mais je boit de la grenadine ",0,70,-70,0,26,-30,0.2,new Date(1,7,13));
+	Evenement evAlea8 = new Evenement("tempête de neige","je vient en traineau","le metro doit être en panne je reste chez moi ",0,70,-70,0,26,-30,0.2,new Date(1,7,13));
 	
 	evenements.add(ev1);
 	evenements.add(ev2);
@@ -36,6 +41,11 @@ public class GenerationEvenements {
 	evenements.add(evAlea1);
 	evenements.add(evAlea2);
 	evenements.add(evAlea3);
+	evenements.add(evAlea4);
+	evenements.add(evAlea5);
+	evenements.add(evAlea6);
+	evenements.add(evAlea7);
+	evenements.add(evAlea8);
 	
 	
 	Evenement ev11 = new Evenement("Amphi analyse","J'y vais !","J'y vais pas",0,10,-10,10,10,-10,new Date(2,1,8));
