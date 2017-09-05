@@ -95,11 +95,11 @@ public class Evenement {
 	
 
 	public String toString(){
-		return "nom: "+this.event+"\n"+
+		return this.event+"\n"+
 			   " choix1: "+this.choix1+"\n"+
 			   " choix2: "+this.choix2+"\n"+
 			   " choix3: "+this.choix3+"\n"+
-			   " DateEvenement: "+this.uneDateEvenement;
+			   " DateEvenement: "+this.uneDateEvenement+"\n";
 	}
 
 	
