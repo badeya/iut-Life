@@ -39,7 +39,7 @@ public class Main {
 				jourActuel=1;
 				semaineActuelle++;
 			}
-			System.out.println(new Date(semaineActuelle,jourActuel,heureActuelle).toString());
+			//System.out.println(new Date(semaineActuelle,jourActuel,heureActuelle).toString());
 			Evenement moment=null;
 
 			for(Evenement e:e1){
@@ -51,9 +51,13 @@ public class Main {
 
 
 			}
-			if(moment==null){
-				System.out.println("\n Il n'y a pas eu d'évenement à cette heure ci!");
-			}else{
+			if(moment!=null){
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException e2) {
+					e2.printStackTrace();
+				}
+				System.out.println(new Date(semaineActuelle,jourActuel,heureActuelle).toString());
 				Double rdm=r.nextDouble();
 				// Debug : System.out.println("L'evenement "+moment.toString()+" proba:"+moment.proba+" Random: "+rdm);
 				if(moment.proba > rdm){
@@ -90,11 +94,10 @@ public class Main {
 				
 			}
 		}while(Fins.getFinactive() == -1);
-		
-		System.out.println("\n" + Fins.finDuJeu() + "\n");
 		System.out.println("Energie:"+Joueur.getBarreEnergie());
 		System.out.println("Popularité:"+Joueur.getBarrePopularite());
 		System.out.println("Résultats:"+Joueur.getBarreResultats()+ "\n");
+		System.out.println("\n" + Fins.finDuJeu() + "\n");
 		System.out.println("Tu as survecu " + nbrHeures + " heures avec un score de " + score);
 	}
 	
