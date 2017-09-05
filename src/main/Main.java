@@ -1,18 +1,21 @@
 
 package main;
 
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
-	private static Barre barreEnergie=new Barre(NomBarre.Energie);
-	private static Barre barrePopularite=new Barre(NomBarre.Popularite);
-	private static Barre barreResultats=new Barre(NomBarre.Resultats);
+	private static Barre barreEnergie=new Barre(NomBarre.ENERGIE);
+	private static Barre barrePopularite=new Barre(NomBarre.POPULARITE);
+	private static Barre barreResultats=new Barre(NomBarre.RESULTATS);
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		
+
+		List e1 = new ArrayList<Evenement>();
 		Barre barre=getBarreEnergie();
-		System.out.println();
+		System.out.println(barre);
 
 	}
 	public static Barre getBarreEnergie() {
