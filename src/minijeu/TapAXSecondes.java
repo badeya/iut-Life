@@ -11,14 +11,14 @@ public class TapAXSecondes {
 		Random r=new Random();
 		int time=r.nextInt(3)+2;
 		System.out.println("Il vous faut taper sur entrée 2 fois d'affilée à "+time+" secondes d'intervalle!");
-		System.out.println("Si tu réussi, Tu réinitialise ta bare d'energie!");
+		System.out.println("Si tu réussi, Tu réinitialise ta barre d'energie!");
 		System.out.println("Appuyez dès que vous êtes pret!");
 		sc.nextLine();
 		long depart=System.nanoTime();
 		sc.nextLine();
 		long fin=System.nanoTime();
-		long diff=fin-depart;
-		if(diff>1000000000){
+		long diff=fin-depart-(time*1000000000);
+		if(diff<1000000000 && diff>-1000000000){
 			System.out.println("Echec, différence de:"+diff/1000000000.0);
 			return 0;
 		}
