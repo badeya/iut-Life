@@ -15,10 +15,11 @@ public class GenerationEvenements {
 	Evenement ev4 = new Evenement("Sport de la semaine","J'y vais","J'y vais pas",5,0,-30,25,10,15,new Date(1,2,17));
 	Evenement ev5 = new Evenement("Deuxième Amphi de l'annee","J'y vais !","J'y vais pas","J'arrive en retard",0,15,30,-10,10,0,20,-20,0,new Date(1,3,13));
 	Evenement ev6 = new Evenement("Premier DS de l'annee","Je révise à fond","Je révise moyen","Le talent !",-5,5,15,-30,-15,15,60,35,-50,new Date(1,4,14));
-	Evenement ev7 = new Evenement("Pause midi ! Kiosque ou RU ?","Kiosque","RU",0,0,-5,-10,-15,20,new Date(1,5,12));
+	Evenement ev7 = new Evenement("Pause midi ! Kiosque ou RU ?","Kio1sque","RU",0,0,-5,-10,-15,20,new Date(1,5,12));
 	Evenement ev8 = new Evenement("Troisième amphi ! Interro Surprise !","Ouf j'y étais","Merde, j'ai seche",0,10,0,10,20,-40,new Date(1,6,9));
 	Evenement ev9 = new Evenement("Pause Midi ! Sandwich oublie","Je taxe un pote","Tant pis",0,0,5,-5,0,-5,new Date(1,6,12));
 	Evenement ev10 = new Evenement("Soiree de ouf mec","Je me défonce comme jaja","Soyons raisonnable",0,70,-100,-30,0,-10,new Date(1,7,18));
+
 	Evenement evAlea1 = new Evenement("TP d'Algo mon PC Crache","Je vais voir le technicien","tant pis pas de TP","Je le ferais plus tard",0,15,10,-20,15,-10,0,-10,-5,0.1,new Date(2,1,13));
 	Evenement evAlea2 = new Evenement("Panne electrique dans l'IUT","J'attend ","je rentre chez moi","Je scanne les cours de mon copain",-10,35,10,-35,20,-14,25,-20,-5,0.5,new Date(1,5,14));
 	Evenement evAlea3 = new Evenement("Le prof a 1h00 de retard","J'attend ","je rentre chez moi","Je scanne les cours de mon copain",-10,35,10,-35,20,-14,25,-20,-5,0.2,new Date(2,2,13));
@@ -35,6 +36,7 @@ public class GenerationEvenements {
 	Evenement evAlea14 = new Evenement("TP d'Algo mon PC Crache","Je vais voir le technicien","tant pis pas de TP","Je le ferais plus tard",0,15,10,-20,15,-10,0,-10,-5,0.1,new Date(2,4,13));
 	Evenement evAlea15 = new Evenement("panne de reveil","je cours pour être à l'heure et j'arrive en pyjama","je reste dans mon lit ppp ce n'est pas important  ",20,30,-20,20,20,-30,0.2,new Date(2,5,8));
 	Evenement evAlea16 = new Evenement("Le ru est fermé","Je vais à Auchan m'acheter un sandwich et j'arrive en retard en cours ","je ne mange pas","Je mange un reste de biscuit retrouvé dans mon sac",20,-10,-30,-15,-5,0,5,5,5,0.2,new Date(2,5,12));
+
 	evenements.add(ev1);
 	evenements.add(ev2);
 	evenements.add(ev3);

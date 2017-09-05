@@ -54,7 +54,9 @@ public class Main {
 			if(moment==null){
 				System.out.println("\n Il n'y a pas eu d'évenement à cette heure ci!");
 			}else{
-				if(moment.proba > r.nextDouble()){
+				Double rdm=r.nextDouble();
+				// Debug : System.out.println("L'evenement "+moment.toString()+" proba:"+moment.proba+" Random: "+rdm);
+				if(moment.proba > rdm){
 					System.out.println(moment.toString());
 					System.out.println("Energie:"+Joueur.getBarreEnergie());
 					System.out.println("Popularité:"+Joueur.getBarrePopularite());
@@ -82,15 +84,17 @@ public class Main {
 			Joueur.BarreHorsLimites();
 			nbrHeures++;
 			if(Joueur.getBarreEnergie().getValeur()+Joueur.getBarrePopularite().getValeur()+Joueur.getBarreResultats().getValeur()>150) score=Joueur.getBarreEnergie().getValeur()+Joueur.getBarrePopularite().getValeur()+Joueur.getBarreResultats().getValeur()-150;
-			if(Joueur.getBarreEnergie().getValeur()+Joueur.getBarrePopularite().getValeur()+Joueur.getBarreResultats().getValeur()<150) score=150-Joueur.getBarreEnergie().getValeur()+Joueur.getBarrePopularite().getValeur()+Joueur.getBarreResultats().getValeur();
-			if(nbrHeures==14) score=score/2;
+			else if(Joueur.getBarreEnergie().getValeur()+Joueur.getBarrePopularite().getValeur()+Joueur.getBarreResultats().getValeur()<150) score=150-Joueur.getBarreEnergie().getValeur()+Joueur.getBarrePopularite().getValeur()+Joueur.getBarreResultats().getValeur();
 			if (jourActuel == 7 && semaineActuelle == 2 && heureActuelle == 23) {
 				Fins.setFinactive(1);
 				
 			}
 		}while(Fins.getFinactive() == -1);
 		
-		System.out.println(Fins.finDuJeu());
+		System.out.println("\n" + Fins.finDuJeu() + "\n");
+		System.out.println("Energie:"+Joueur.getBarreEnergie());
+		System.out.println("Popularité:"+Joueur.getBarrePopularite());
+		System.out.println("Résultats:"+Joueur.getBarreResultats()+ "\n");
 		System.out.println("Tu as survecu " + nbrHeures + " heures avec un score de " + score);
 	}
 	
