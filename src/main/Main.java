@@ -23,7 +23,7 @@ public class Main {
 		do{
 			for(Evenement e:e1){
 				if(e.uneDateEvenement.getHeure()==heureActuelle && e.uneDateEvenement.getJour()==jourActuel && e.uneDateEvenement.getSemaine()==semaineActuelle){
-					
+					System.out.println(e.toString());
 				}
 			}
 			System.out.println("Energie:"+getBarreEnergie());
@@ -32,10 +32,6 @@ public class Main {
 			fini=true;
 			
 		}while(!fini);
-		System.out.println();
-		Barre barre=getBarreEnergie();
-		System.out.println(barre);
-
 	}
 	public static Barre getBarreEnergie() {
 		return barreEnergie;
