@@ -26,7 +26,7 @@ public class Date {
 
 
 	public String toString(){
-		return "semaine:"+this.semaine+"jour:"+this.jour+"heure:"+this.heure;
+		return " semaine: "+this.semaine+" jour: "+this.jour+" heure: "+this.heure;
 	}
 
 }
