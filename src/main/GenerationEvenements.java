@@ -19,6 +19,9 @@ public class GenerationEvenements {
 	Evenement ev8 = new Evenement("Troisième amphi ! Interro Surprise !","Ouf j'y étais","Merde, j'ai seche",0,10,0,10,20,-40,new Date(1,6,9));
 	Evenement ev9 = new Evenement("Pause Midi ! Sandwich oublie","Je taxe un pote","Tant pis",0,0,5,-5,0,-5,new Date(1,6,12));
 	Evenement ev10 = new Evenement("Soiree de ouf mec","Je me défonce comme jaja","Soyons raisonnable",0,70,-100,-30,0,-10,new Date(1,7,18));
+	Evenement evAlea1 = new Evenement("TP d'Algo mon PC Crache","Je vais voir le technicien","tant pis pas de TP","Je le ferais plus tard",0,20,12,-50,10,-20,0,-10,-5,1,new Date(1,1,12));
+	Evenement evAlea2 = new Evenement("Panne electrique dans l'IUT","J'attend ","je rentre chez moi","Je scanne les cours de mon copain",0,70,32,-70,0,-14,26,-30,-18,1,new Date(1,6,20));
+	Evenement evAlea3 = new Evenement("Le prof a 1h00 de retard","J'attend ","je rentre chez moi","Je scanne les cours de mon copain",0,70,32,-70,0,-14,26,-30,-18,1,new Date(1,7,13));
 	
 	evenements.add(ev1);
 	evenements.add(ev2);
@@ -30,6 +33,9 @@ public class GenerationEvenements {
 	evenements.add(ev8);
 	evenements.add(ev9);
 	evenements.add(ev10);
+	evenements.add(evAlea1);
+	evenements.add(evAlea2);
+	evenements.add(evAlea3);
 	
 	}
 	
