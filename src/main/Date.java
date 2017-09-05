@@ -1,26 +1,26 @@
 package main;
 
 public class Date {
-	private String semaine;
-	private String jour;
-	private String heure;
+	private int semaine;
+	private int jour;
+	private int heure;
 	
-	public Date(String semaine, String jour, String heure){
+	public Date(int semaine, int jour, int heure){
 		this.semaine=semaine;
 		this.jour=jour;
 		this.heure=heure;
 	}	
 	
-	public String getSemaine() {
+	public int getSemaine() {
 		return semaine;
 	}
 
 
-	public String getJour() {
+	public int getJour() {
 		return jour;
 	}
 
-	public String getHeure() {
+	public int getHeure() {
 		return heure;
 	}
 
