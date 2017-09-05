@@ -17,7 +17,7 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		TapTap.main(sc);
+		//TapTap.main(sc);
 		Random r = new Random();
 		boolean fini=false;
 		int jourActuel=1;
