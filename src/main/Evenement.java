@@ -9,7 +9,7 @@ public class Evenement {
 	double valeurPopChoix1, valeurPopChoix2, valeurPopChoix3; 
 	double valeurEneChoix1, valeurEneChoix2, valeurEneChoix3;
 	double valeurResChoix1, valeurResChoix2, valeurResChoix3;
-	double proba;
+	double proba=1.0;
 	Date uneDateEvenement;
 	
 	//Evenement aléatoire à deux choix
