@@ -34,10 +34,9 @@ public class GenerationEvenements {
 	Evenement evAlea12 = new Evenement("Ce weekend c'était le wei, j'ai la gueule de bois mais j'ai DS de BDD", "Je rebois un coup : on combat le mal par le mal", "Je révise et je vais au ds",30,-20,-10,-15,-20,20,0.6,new Date(2,1,8));
 	Evenement evAlea13 = new Evenement("Mr Place te dit que tu peux prendre une pause, mais Mr Beaufils te regarde, que fais tu?","Trop risqué je reste en TP","Je sors quand même",-10,15,-20,15,15,-10,0.3,new Date(2,4,10));
 	Evenement evAlea14 = new Evenement("Tout le monde parle en amphi mais Mr Carle t'as remarqué","Je soutiens le regard","Je baisse les yeux",50,-10,15,20,-10,10,0.5,new Date(2,4,15));
-
-	Evenement evAlea15 = new Evenement("panne de reveil","je cours pour être à l'heure et j'arrive en pyjama","je reste dans mon lit ppp ce n'est pas important  ",20,30,-20,20,20,-30,0.2,new Date(2,5,8));
-	Evenement evAlea16 = new Evenement("Le ru est fermé","Je vais à Auchan m'acheter un sandwich et j'arrive en retard en cours ","je ne mange pas","Je mange un reste de biscuit retrouvé dans mon sac",20,-10,-30,-15,-5,0,5,5,5,0.2,new Date(2,5,12));
-
+	Evenement evAlea15 = new Evenement("Le BDE organise un petit déjeuner","Tu squattes avec le bde et tu ne vas pas en amphi","Tu prends un café et tu vas en amphi tout seul",15,-20,10,-15,-15,20,0.7,new Date(2,5,9));
+	Evenement evAlea16 = new Evenement("Tu dois écrire un programme en langage C","Tu fais un énorme programme avec pleins de pointeurs","C'est quoi un pointeur ? ","Tu fais un programme bidon",-5,10,0,-20,0,-5,15,-20,5,0.9, new Date(1,5,14));
+	
 	evenements.add(ev1);
 	evenements.add(ev2);
 	evenements.add(ev3);
