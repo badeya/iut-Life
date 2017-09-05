@@ -76,4 +76,8 @@ public class Evenement {
 		
 	}
 	
+	public String toString(){
+		return "nom:"+this.event+"choix1:"+this.choix1+"choix2:"+this.choix2+"choix3:"+this.choix3+"valeurPopChoix1:"+this.valeurPopChoix1+"valeurPopChoix2:"+this.valeurPopChoix2+"valeurPopChoix3:"+this.valeurPopChoix3+"valeurEneChoix1:"+this.valeurEneChoix1+"valeurEneChoix2:"+this.valeurEneChoix2+"valeurEneChoix3"+this.valeurEneChoix3+"valeurResChoix1:"+this.valeurResChoix1+"valeurResChoix2:"+this.valeurResChoix2+"valeurResChoix3:"+this.valeurResChoix3+"DateEvenement:"+this.uneDateEvenement;
+	}
+	
 }
