@@ -19,7 +19,7 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		//TapTap.main(sc);
 		Random r = new Random();
-		boolean fini=false;
+		boolean premierTour=true;
 		int jourActuel=1;
 		int semaineActuelle=1;
 		int heureActuelle=1;
@@ -34,6 +34,9 @@ public class Main {
 		List<Evenement> e1 = ge.getEvenements();
 
 		System.out.println("IUT - SIMULATOR 2017 \n");
+		
+		System.out.println("Voici ton Agenda, mémorise le pour prévoir ce qui est sûr de se passer:");
+		System.out.println(Agenda.afficherEvenement(e1));
 
 		do{
 			//Mise A jour de date / heure
@@ -47,15 +50,17 @@ public class Main {
 				semaineActuelle++;
 			}
 			//System.out.println(new Date(semaineActuelle,jourActuel,heureActuelle).toString());
-			try {
-				Thread.sleep(100);
-			} catch (InterruptedException e2) {
-				e2.printStackTrace();
+			if(!premierTour){
+				try {
+					Thread.sleep(100);
+				} catch (InterruptedException e2) {
+					e2.printStackTrace();
+				}
 			}
 			Evenement moment=null;
 
 			for(Evenement e:e1){
-				if(e.uneDateEvenement.getHeure()==heureActuelle && e.uneDateEvenement.getJour()==jourActuel && e.uneDateEvenement.getSemaine()==semaineActuelle){
+				if(e.getDateEvenement().getHeure()==heureActuelle && e.getDateEvenement().getJour()==jourActuel && e.getDateEvenement().getSemaine()==semaineActuelle){
 
 					moment=e;
 
@@ -64,16 +69,17 @@ public class Main {
 
 			}
 			if(moment!=null){
+				premierTour=false;
 				Double rdm=r.nextDouble();
 				// Debug : System.out.println("L'evenement "+moment.toString()+" proba:"+moment.proba+" Random: "+rdm);
-				if(moment.proba > rdm){
+				if(moment.getProba() > rdm){
 					System.out.println(new Date(semaineActuelle,jourActuel,heureActuelle).toString());
 					System.out.println(moment.toString());
 					System.out.println("Energie:"+Joueur.getBarreEnergie());
 					System.out.println("Popularité:"+Joueur.getBarrePopularite());
 					System.out.println("Résultats:"+Joueur.getBarreResultats());
 
-					
+
 					String str="";
 					do{
 						System.out.println("Faites votre choix : (entrez un chiffre)");
@@ -94,15 +100,29 @@ public class Main {
 			}else{
 				//MINIJEU SI PAS D'EVENEMENT
 				Double val=r.nextDouble();
-				if(val<0.05){
+				if(val<0.015){
+					System.out.println();
+					System.out.println("Energie:"+Joueur.getBarreEnergie());
+					System.out.println("Popularité:"+Joueur.getBarrePopularite());
+					System.out.println("Résultats:"+Joueur.getBarreResultats());
+					System.out.println();
 					if(TapAXSecondes.main(sc)==1){
 						Joueur.setBarreEnergie(new Barre(NomBarre.ENERGIE));
+					}else{
+						Joueur.getBarreEnergie().setValeur(Joueur.getBarreEnergie().getValeur()-15);
 					}
-				}else if(val<0.1){
+				}else if(val<0.03){
+					System.out.println();
+					System.out.println("Energie:"+Joueur.getBarreEnergie());
+					System.out.println("Popularité:"+Joueur.getBarrePopularite());
+					System.out.println("Résultats:"+Joueur.getBarreResultats());
+					System.out.println();
 					if(TapTap.main(sc)>40){
 						Joueur.setBarrePopularite(new Barre(NomBarre.POPULARITE));
+					}else{
+						Joueur.getBarrePopularite().setValeur(Joueur.getBarrePopularite().getValeur()-15);
 					}
-					
+
 				}
 			}
 			//Vérifie la fin
@@ -130,7 +150,7 @@ public class Main {
 			//else if((Joueur.getBarreEnergie().getValeur()+Joueur.getBarrePopularite().getValeur()+Joueur.getBarreResultats().getValeur())<150) score=(50-(Joueur.getBarreEnergie().getValeur())+50-(Joueur.getBarrePopularite().getValeur())+50-(Joueur.getBarreResultats().getValeur()));
 			if (jourActuel == 7 && semaineActuelle == 2 && heureActuelle == 23) {
 				Fins.setFinactive(1);
-				
+
 			}
 			
 		}while(Fins.getFinactive() == -1);
@@ -144,6 +164,6 @@ public class Main {
 		System.out.println("Tu as obtenu un score de " + scorePopularite + " en Popularite ");
 		System.out.println("Tu as obtenu un score de " + scoreResultats + " en Resultats ");
 	}
-	
+
 
 }

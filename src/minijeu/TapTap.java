@@ -7,7 +7,7 @@ public class TapTap {
 	Scanner sc=new Scanner(System.in);
 	
 	public static int main(Scanner sc) {
-		System.out.println(" +++++++++ MINIJEU ++++++++ ");
+		System.out.println("Vous êtes en retard pour votre cours, cours pour arriver à l'heure!");
 		
 		double timefin=5000000000.0;
 		
@@ -25,9 +25,9 @@ public class TapTap {
 		}while(System.nanoTime()<depart+timefin);
 		
 		if(cpt>40){
-			System.out.println("vous avez réussi à appuyer "+cpt);
+			System.out.println("Bravo vous êtes arriver a l'heure avec un score de "+cpt);
 		}else
-			System.out.println("vous avez échoué, vous avez appuyer "+cpt);
+			System.out.println("Cheh vous êtes en retard avec un score de "+cpt);
 		
 		return cpt;
 		

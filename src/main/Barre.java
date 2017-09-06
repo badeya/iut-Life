@@ -11,13 +11,30 @@ public class Barre {
 	}
 	
 	public String toString(){
-		
 		String res="\t [";
-		for(int i=0;i<valeur/5;i++){
+		//Couleur
+		/*
+		if(this.nom==NomBarre.ENERGIE){
+			res+=(char)27+ "[33";
+		}else if(this.nom==NomBarre.POPULARITE){
+			res+=(char)27+ "[34";
+		}else{
+			res+=(char)27+ "[36";
+		}
+		*/
+		int valaffiche=(int) valeur;
+		if(valeur>100)valaffiche=100;
+		for(int i=0;i<valaffiche/5;i++){
 		res+="=";
 		}
+		for(int i=(valaffiche/5);i<20;i++){
+		res+=" ";	
+		}
+		res+="]";
 		res+="\t \t \t"+valeur+" %";
 		
+		
+		res+=(char)0;
 		
 		return res;
 		
