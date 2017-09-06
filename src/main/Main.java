@@ -24,7 +24,10 @@ public class Main {
 		int semaineActuelle=1;
 		int heureActuelle=1;
 		int nbrHeures=0;
-		double score=0;
+		double scoreEnergie=0;
+		double scorePopularite=0;
+		double scoreResultats=0;
+		
 
 		GenerationEvenements ge=new GenerationEvenements();
 
@@ -125,18 +128,41 @@ public class Main {
 			//Vérifie la fin
 			Joueur.BarreHorsLimites();
 			nbrHeures++;
-			if((Joueur.getBarreEnergie().getValeur()+Joueur.getBarrePopularite().getValeur()+Joueur.getBarreResultats().getValeur())>150) score=(Joueur.getBarreEnergie().getValeur()+Joueur.getBarrePopularite().getValeur()+Joueur.getBarreResultats().getValeur())-150;
-			else if((Joueur.getBarreEnergie().getValeur()+Joueur.getBarrePopularite().getValeur()+Joueur.getBarreResultats().getValeur())<150) score=150-(Joueur.getBarreEnergie().getValeur()+Joueur.getBarrePopularite().getValeur()+Joueur.getBarreResultats().getValeur());
+			//if((Joueur.getBarreEnergie().getValeur()+Joueur.getBarrePopularite().getValeur()+Joueur.getBarreResultats().getValeur())>150) score=((Joueur.getBarreEnergie().getValeur())-50+(Joueur.getBarrePopularite().getValeur())-50+(Joueur.getBarreResultats().getValeur())-50);
+			if((Joueur.getBarreEnergie().getValeur()>50)){
+				scoreEnergie=(Joueur.getBarreEnergie().getValeur())-50;
+			}
+			else if((Joueur.getBarreEnergie().getValeur()<=50)){
+				scoreEnergie=50-(Joueur.getBarreEnergie().getValeur());
+			}
+			if((Joueur.getBarrePopularite().getValeur()>50)){
+				scorePopularite=(Joueur.getBarrePopularite().getValeur())-50;
+			}
+			else if((Joueur.getBarrePopularite().getValeur()<=50)){
+				scorePopularite=50-(Joueur.getBarrePopularite().getValeur());
+			}
+			if((Joueur.getBarreResultats().getValeur()>50)){
+				scoreResultats=(Joueur.getBarreResultats().getValeur())-50;
+			}
+			else if((Joueur.getBarreResultats().getValeur()<=50)){
+				scoreResultats=50-(Joueur.getBarreResultats().getValeur());
+			}
+			//else if((Joueur.getBarreEnergie().getValeur()+Joueur.getBarrePopularite().getValeur()+Joueur.getBarreResultats().getValeur())<150) score=(50-(Joueur.getBarreEnergie().getValeur())+50-(Joueur.getBarrePopularite().getValeur())+50-(Joueur.getBarreResultats().getValeur()));
 			if (jourActuel == 7 && semaineActuelle == 2 && heureActuelle == 23) {
 				Fins.setFinactive(1);
 
 			}
+			
 		}while(Fins.getFinactive() == -1);
+		double score= scoreEnergie+scorePopularite+scoreResultats;
 		System.out.println("Energie:"+Joueur.getBarreEnergie());
 		System.out.println("Popularité:"+Joueur.getBarrePopularite());
 		System.out.println("Résultats:"+Joueur.getBarreResultats()+ "\n");
 		System.out.println("\n" + Fins.finDuJeu() + "\n");
 		System.out.println("Tu as survecu " + nbrHeures + " heures avec un score de " + score);
+		System.out.println("Tu as obtenu un score de " + scoreEnergie + " en Energie ");
+		System.out.println("Tu as obtenu un score de " + scorePopularite + " en Popularite ");
+		System.out.println("Tu as obtenu un score de " + scoreResultats + " en Resultats ");
 	}
 
 
