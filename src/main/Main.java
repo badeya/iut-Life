@@ -31,6 +31,9 @@ public class Main {
 		List<Evenement> e1 = ge.getEvenements();
 
 		System.out.println("IUT - SIMULATOR 2017 \n");
+		
+		System.out.println("Voici ton Agenda, mémorise le pour prévoir ce qui est sûr de se passer:");
+		System.out.println(Agenda.afficherEvenement(e1));
 
 		do{
 			//Mise A jour de date / heure
