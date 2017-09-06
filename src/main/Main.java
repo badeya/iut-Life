@@ -159,6 +159,7 @@ public class Main {
 			}
 			
 		}while(Fins.getFinactive() == -1);
+		double score =scoreEnergie+scorePopularite+scoreResultats;
 		Joueur.affichageBarres();
 		System.out.println("\n" + Fins.finDuJeu() + "\n");
 		System.out.println("Tu as survecu " + nbrHeures + " heures avec un score de " + score);
