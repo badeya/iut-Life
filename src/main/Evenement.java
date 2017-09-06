@@ -1,9 +1,8 @@
 package main;
 
-import java.util.Random;
+
 
 public class Evenement {
-	private Random r = new Random();
 	private String event;
 	private String choix1, choix2, choix3;
 	private double valeurPopChoix1, valeurPopChoix2, valeurPopChoix3;

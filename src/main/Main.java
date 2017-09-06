@@ -5,8 +5,6 @@ import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
-import minijeu.TapAXSecondes;
-import minijeu.TapTap;
 import verifSaisie.EntierPositifNonVide;
 
 public class Main {
