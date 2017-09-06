@@ -13,14 +13,14 @@ public class GenerationEvenements {
 	Evenement ev2 = new Evenement("Soirée de reprise !","J'y vais !","J'y vais pas",20,-25,-15,15,-15,0,new Date(1,1,20));
 	Evenement ev3 = new Evenement("Pause Midi","Sandwich ?","Box de pâtes ?",0,0,10,20,0,0,new Date(1,2,12));
 	Evenement ev4 = new Evenement("Sport de la semaine","J'y vais","J'y vais pas",5,0,-20,20,10,0,new Date(1,2,17));
-	Evenement ev5 = new Evenement("Deuxième Amphi de l'annee","J'y vais !","J'y vais pas","J'arrive en retard",0,15,20,-10,10,10,10,-15,0,new Date(1,3,13));
+	Evenement ev5 = new Evenement("Deuxième Amphi de l'annee","J'y vais !","J'y vais pas","J'arrive en retard",-5,10,15,-10,10,5,10,-15,0,new Date(1,3,13));
 	Evenement ev6 = new Evenement("Intégration de l'IUT ce soir, mais y'a un DS demain...","J'y vais tant pis pour le DS","Je reste réviser chez moi","Je me bourre à fond",20,-10,15,-15,0,-20,-10,15,-15,0.4,new Date(1,3,21));
-	Evenement ev7 = new Evenement("Premier DS de l'année","Je révise à fond","Je révise moyen","Le talent !",-5,5,15,-30,-15,15,60,35,-50,new Date(1,4,14));
+	Evenement ev7 = new Evenement("Premier DS de l'année","Je révise à fond","Je révise moyen","Le talent !",-5,5,10,-20,-15,10,30,20,-20,new Date(1,4,14));
 	Evenement ev22 = new Evenement("Le métro est en panne, tu as cours de web avec Carle","C'était le destin, je rentre chez moi","Je ne peux pas me passer des cours de web,j'y vais à poney",10,10,15,-15,-10,15,0.7,new Date(1,4,8));
 	Evenement ev8= new Evenement("Pause midi ! Kiosque ou RU ?","Kiosque","RU",0,0,-5,-10,-15,20,new Date(1,5,12));
-	Evenement ev9 = new Evenement("Troisième amphi ! Interro Surprise !","Ouf j'y étais","Merde, j'ai seche",0,10,0,10,20,-40,new Date(1,6,9));
+	Evenement ev9 = new Evenement("Troisième amphi ! Interro Surprise !","Ouf j'y étais","Merde, j'ai seche",0,10,0,10,10,-20,new Date(1,6,9));
 	Evenement ev10 = new Evenement("Pause Midi ! Sandwich oublie","Je taxe un pote","Tant pis",0,0,5,-5,0,-5,new Date(1,6,12));
-	Evenement ev11 = new Evenement("Soiree de ouf mec","Je me défonce comme jaja","Soyons raisonnable",40,0,-100,-10,0,-10,new Date(1,7,18));
+	Evenement ev11 = new Evenement("Soiree de ouf mec","Je me défonce comme jaja","Soyons raisonnable",30,0,-100,-10,0,-10,new Date(1,7,18));
 
 	Evenement evAlea1 = new Evenement("TP d'Algo mon PC crache","Je vais voir le technicien","Tant pis pas de TP","Je le ferais plus tard",0,15,10,-20,15,-10,0,-10,-5,0.1,new Date(2,1,13));
 	Evenement evAlea2 = new Evenement("Panne electrique dans l'IUT","J'attends ","Je rentre chez moi","Je scanne les cours de mon copain",-10,35,10,-35,20,-14,25,-20,-5,0.5,new Date(1,5,14));
