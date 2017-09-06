@@ -30,4 +30,11 @@ public class Joueur {
 		if(getBarreResultats().getValeur()<=0) Fins.setFinactive(6);
 		if(getBarreResultats().getValeur()>=100) Fins.setFinactive(7);
 	}
+	
+	public static void affichageBarres(){
+		System.out.println();
+		System.out.println("Energie:"+Joueur.getBarreEnergie());
+		System.out.println("Popularité:"+Joueur.getBarrePopularite());
+		System.out.println("Résultats:"+Joueur.getBarreResultats());
+	}
 }

@@ -88,9 +88,7 @@ public class Main {
 				if(moment.getProba() > rdm){
 					System.out.println(new Date(semaineActuelle,jourActuel,heureActuelle).toString());
 					System.out.println(moment.toString());
-					System.out.println("Energie:"+Joueur.getBarreEnergie());
-					System.out.println("Popularité:"+Joueur.getBarrePopularite());
-					System.out.println("Résultats:"+Joueur.getBarreResultats());
+					Joueur.affichageBarres();
 
 
 					String str="";
@@ -114,10 +112,7 @@ public class Main {
 				//MINIJEU SI PAS D'EVENEMENT
 				Double val=r.nextDouble();
 				if(val<0.015){
-					System.out.println();
-					System.out.println("Energie:"+Joueur.getBarreEnergie());
-					System.out.println("Popularité:"+Joueur.getBarrePopularite());
-					System.out.println("Résultats:"+Joueur.getBarreResultats());
+					Joueur.affichageBarres();
 					System.out.println();
 					if(TapAXSecondes.main(sc)==1){
 						Joueur.setBarreEnergie(new Barre(NomBarre.ENERGIE));
@@ -125,10 +120,7 @@ public class Main {
 						Joueur.getBarreEnergie().setValeur(Joueur.getBarreEnergie().getValeur()-15);
 					}
 				}else if(val<0.03){
-					System.out.println();
-					System.out.println("Energie:"+Joueur.getBarreEnergie());
-					System.out.println("Popularité:"+Joueur.getBarrePopularite());
-					System.out.println("Résultats:"+Joueur.getBarreResultats());
+					Joueur.affichageBarres();
 					System.out.println();
 					if(TapTap.main(sc)>40){
 						Joueur.setBarrePopularite(new Barre(NomBarre.POPULARITE));
@@ -167,10 +159,7 @@ public class Main {
 			}
 			
 		}while(Fins.getFinactive() == -1);
-		double score= scoreEnergie+scorePopularite+scoreResultats;
-		System.out.println("Energie:"+Joueur.getBarreEnergie());
-		System.out.println("Popularité:"+Joueur.getBarrePopularite());
-		System.out.println("Résultats:"+Joueur.getBarreResultats()+ "\n");
+		Joueur.affichageBarres();
 		System.out.println("\n" + Fins.finDuJeu() + "\n");
 		System.out.println("Tu as survecu " + nbrHeures + " heures avec un score de " + score);
 		System.out.println("Tu as obtenu un score de " + scoreEnergie + " en Energie ");
