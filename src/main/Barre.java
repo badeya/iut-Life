@@ -23,13 +23,23 @@ public class Barre {
 		}
 		*/
 		int valaffiche=(int) valeur;
-		if(valeur>100)valaffiche=100;
-		for(int i=0;i<valaffiche/5;i++){
+		if(valeur>100)valaffiche=100; 
+		if(valeur<0)valaffiche=0;
+		for(int i=0;i<100;i=i+5){
+			if(valaffiche>i){
+				res+='=';
+			}else{
+				res+=' ';
+			}
+		}
+		/*
+		for(int i=1;i<valaffiche/5;i++){
 		res+="=";
 		}
-		for(int i=(valaffiche/5);i<20;i++){
+		for(int i=(valaffiche/5)+1;i<19;i++){
 		res+=" ";	
 		}
+		*/
 		res+="]";
 		res+="\t \t \t"+valeur+" %";
 		
