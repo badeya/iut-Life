@@ -91,11 +91,11 @@ public class Main {
 			}else{
 				//MINIJEU SI PAS D'EVENEMENT
 				Double val=r.nextDouble();
-				if(val<0.05){
+				if(val<0.015){
 					if(TapAXSecondes.main(sc)==1){
 						Joueur.setBarreEnergie(new Barre(NomBarre.ENERGIE));
 					}
-				}else if(val<0.1){
+				}else if(val<0.03){
 					if(TapTap.main(sc)>40){
 						Joueur.setBarrePopularite(new Barre(NomBarre.POPULARITE));
 					}
