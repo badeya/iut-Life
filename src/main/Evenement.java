@@ -147,7 +147,7 @@ public class Evenement {
 	}
 	
 	public String toString2() {
-		return event + " " + this.getUneDateEvenement().getHeure();
+		return event + " à " + this.getUneDateEvenement().getHeure() + "H";
 	}
 	
 }
