@@ -3,16 +3,24 @@ package main;
 import java.util.Random;
 
 public class Evenement {
-	Random r = new Random();
-	String event; 
-	String choix1,choix2,choix3;
-	double valeurPopChoix1, valeurPopChoix2, valeurPopChoix3; 
-	double valeurEneChoix1, valeurEneChoix2, valeurEneChoix3;
-	double valeurResChoix1, valeurResChoix2, valeurResChoix3;
-	double proba=1.0;
-	Date uneDateEvenement;
-	int nbChoix=0;
+	private Random r = new Random();
+	private String event; 
+	private String choix1,choix2,choix3;
+	private double valeurPopChoix1, valeurPopChoix2, valeurPopChoix3; 
+	private double valeurEneChoix1, valeurEneChoix2, valeurEneChoix3;
+	private double valeurResChoix1, valeurResChoix2, valeurResChoix3;
+	private double proba=1.0;
+	private Date uneDateEvenement;
+	private int nbChoix=0;
 	
+	public double getProba() {
+		return proba;
+	}
+
+	public Date getDateEvenement() {
+		return uneDateEvenement;
+	}
+
 	//Evenement aléatoire à deux choix
 	public Evenement(String nom, String choix1, String choix2,	double valeurPopChoix1, double valeurPopChoix2, double valeurEneChoix1, double valeurEneChoix2,double valeurResChoix1, double valeurResChoix2, double proba,Date date){
 		event=nom;

@@ -11,16 +11,15 @@ public class Barre {
 	}
 	
 	public String toString(){
-		
 		String res="\t [";
 		//Couleur
 		/*
 		if(this.nom==NomBarre.ENERGIE){
-			res+="\m";
+			res+=(char)27+ "[33";
 		}else if(this.nom==NomBarre.POPULARITE){
-			res+="\33[34m";
+			res+=(char)27+ "[34";
 		}else{
-			res+="\33[36m";
+			res+=(char)27+ "[36";
 		}
 		*/
 		int valaffiche=(int) valeur;
