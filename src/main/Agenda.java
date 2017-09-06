@@ -20,7 +20,7 @@ public class Agenda {
 			if(i==6)res+="Samedi : ";
 			if(i==7)res+="Dimanche : ";
 			for (Evenement e: evenements) {
-				if ( e.proba == 1) {
+				if ( e.getProba() == 1) {
 					if(e.getUneDateEvenement().getJour()==i){
 						if ( e.getUneDateEvenement().getSemaine() == 1 ) {
 							res+=e.toString2() + "\n";
