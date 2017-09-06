@@ -32,14 +32,6 @@ public class Barre {
 				res+=' ';
 			}
 		}
-		/*
-		for(int i=1;i<valaffiche/5;i++){
-		res+="=";
-		}
-		for(int i=(valaffiche/5)+1;i<19;i++){
-		res+=" ";	
-		}
-		*/
 		res+="]";
 		res+="\t \t \t"+valeur+" %";
 		
