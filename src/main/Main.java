@@ -20,18 +20,32 @@ public class Main {
 		//TapTap.main(sc);
 		Random r = new Random();
 		boolean premierTour=true;
-		int jourActuel=1;
-		int semaineActuelle=1;
-		int heureActuelle=1;
-		int nbrHeures=0;
+		int jourActuel;
+		int semaineActuelle;
+		int heureActuelle;
+		int nbrHeures;
 		double scoreEnergie=0;
 		double scorePopularite=0;
 		double scoreResultats=0;
+		boolean relancerJeux=true;
 		
 
 		GenerationEvenements ge=new GenerationEvenements();
 
 		List<Evenement> e1 = ge.getEvenements();
+		
+		
+		
+		while(relancerJeux){
+			 jourActuel=1;
+			 semaineActuelle=1;
+			 heureActuelle=1;
+			 nbrHeures=0;
+			
+			Joueur.setBarreEnergie(new Barre(NomBarre.ENERGIE));
+			Joueur.setBarrePopularite(new Barre(NomBarre.POPULARITE));
+			Joueur.setBarreResultats(new Barre(NomBarre.RESULTATS));
+			Fins.setFinactive(-1);
 
 		System.out.println("IUT - SIMULATOR 2017 \n");
 		
@@ -163,6 +177,20 @@ public class Main {
 		System.out.println("Tu as obtenu un score de " + scoreEnergie + " en Energie ");
 		System.out.println("Tu as obtenu un score de " + scorePopularite + " en Popularite ");
 		System.out.println("Tu as obtenu un score de " + scoreResultats + " en Resultats ");
+		System.out.println("Tu veux rejouer à notre super jeux ? ");
+		System.out.println(" taper 1)OUI ou 2)NON");
+		Scanner lectureClavier = new Scanner(System.in);
+		char rejouer;
+		rejouer=lectureClavier.nextLine().charAt(0);
+		if(rejouer=='1'){
+			relancerJeux=true;
+			
+		}
+		else{
+			System.out.println("Bye !!!");
+			relancerJeux=false;
+		}
+	}
 	}
 
 
