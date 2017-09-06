@@ -19,7 +19,7 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		//TapTap.main(sc);
 		Random r = new Random();
-		boolean fini=false;
+		boolean premierTour=true;
 		int jourActuel=1;
 		int semaineActuelle=1;
 		int heureActuelle=1;
@@ -44,10 +44,12 @@ public class Main {
 				semaineActuelle++;
 			}
 			//System.out.println(new Date(semaineActuelle,jourActuel,heureActuelle).toString());
-			try {
-				Thread.sleep(100);
-			} catch (InterruptedException e2) {
-				e2.printStackTrace();
+			if(!premierTour){
+				try {
+					Thread.sleep(100);
+				} catch (InterruptedException e2) {
+					e2.printStackTrace();
+				}
 			}
 			Evenement moment=null;
 
@@ -61,6 +63,7 @@ public class Main {
 
 			}
 			if(moment!=null){
+				premierTour=false;
 				Double rdm=r.nextDouble();
 				// Debug : System.out.println("L'evenement "+moment.toString()+" proba:"+moment.proba+" Random: "+rdm);
 				if(moment.getProba() > rdm){
@@ -70,7 +73,7 @@ public class Main {
 					System.out.println("Popularité:"+Joueur.getBarrePopularite());
 					System.out.println("Résultats:"+Joueur.getBarreResultats());
 
-					
+
 					String str="";
 					do{
 						System.out.println("Faites votre choix : (entrez un chiffre)");
@@ -113,7 +116,7 @@ public class Main {
 					}else{
 						Joueur.getBarrePopularite().setValeur(Joueur.getBarrePopularite().getValeur()-15);
 					}
-					
+
 				}
 			}
 			//Vérifie la fin
@@ -123,7 +126,7 @@ public class Main {
 			else if((Joueur.getBarreEnergie().getValeur()+Joueur.getBarrePopularite().getValeur()+Joueur.getBarreResultats().getValeur())<150) score=150-(Joueur.getBarreEnergie().getValeur()+Joueur.getBarrePopularite().getValeur()+Joueur.getBarreResultats().getValeur());
 			if (jourActuel == 7 && semaineActuelle == 2 && heureActuelle == 23) {
 				Fins.setFinactive(1);
-				
+
 			}
 		}while(Fins.getFinactive() == -1);
 		System.out.println("Energie:"+Joueur.getBarreEnergie());
@@ -132,6 +135,6 @@ public class Main {
 		System.out.println("\n" + Fins.finDuJeu() + "\n");
 		System.out.println("Tu as survecu " + nbrHeures + " heures avec un score de " + score);
 	}
-	
+
 
 }
