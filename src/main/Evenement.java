@@ -129,15 +129,15 @@ public class Evenement {
 		String resultat;
 		if(nbChoix==3){
 			resultat= this.event+"\n"+
-					   " choix1: "+this.choix1+"\n"+
-					   " choix2: "+this.choix2+"\n"+
-					   " choix3: "+this.choix3+"\n";
+					   " Choix 1: "+this.choix1+"\n"+
+					   " Choix 2: "+this.choix2+"\n"+
+					   " Choix 3: "+this.choix3+"\n";
 			
 		}
 		else{
 			resultat=this.event+"\n"+
-					   " choix1: "+this.choix1+"\n"+
-					   " choix2: "+this.choix2+"\n";
+					   " Choix 1: "+this.choix1+"\n"+
+					   " Choix 2: "+this.choix2+"\n";
 		}
 		return resultat;
 	}
