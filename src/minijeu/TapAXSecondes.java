@@ -22,10 +22,10 @@ public class TapAXSecondes {
 			diff=diff*-1;
 		}
 		
-		if(diff>time+1000000000){
+		if(diff>time+200000000){
 			System.out.println("Echec, temps:"+diff/1000000000.0);
 			return 0;
-		}else if(diff<time-1000000000){
+		}else if(diff<time-200000000){
 			System.out.println("Echec, temps:"+diff/1000000000.0);
 			return 0;
 		}
