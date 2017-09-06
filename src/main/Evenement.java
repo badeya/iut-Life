@@ -95,6 +95,10 @@ public class Evenement {
 	
 	public int getNbChoix() {
 		return nbChoix;
+	}	
+
+	public Date getUneDateEvenement() {
+		return uneDateEvenement;
 	}
 
 	public void consequenceChoix1(){
@@ -141,6 +145,9 @@ public class Evenement {
 		}
 		return resultat;
 	}
-
+	
+	public String toString2() {
+		return event + " " + this.getUneDateEvenement().getHeure();
+	}
 	
 }
