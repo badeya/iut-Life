@@ -110,25 +110,8 @@ public class Main {
 				}
 			}else{
 				//MINIJEU SI PAS D'EVENEMENT
-				Double val=r.nextDouble();
-				if(val<0.015){
-					Joueur.affichageBarres();
-					System.out.println();
-					if(TapAXSecondes.main(sc)==1){
-						Joueur.setBarreEnergie(new Barre(NomBarre.ENERGIE));
-					}else{
-						Joueur.getBarreEnergie().setValeur(Joueur.getBarreEnergie().getValeur()-15);
-					}
-				}else if(val<0.03){
-					Joueur.affichageBarres();
-					System.out.println();
-					if(TapTap.main(sc)>40){
-						Joueur.setBarrePopularite(new Barre(NomBarre.POPULARITE));
-					}else{
-						Joueur.getBarrePopularite().setValeur(Joueur.getBarrePopularite().getValeur()-15);
-					}
-
-				}
+				minijeu.Main minijeu=new minijeu.Main();
+				minijeu.run(sc);
 			}
 			//Vérifie la fin
 			Joueur.BarreHorsLimites();
