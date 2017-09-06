@@ -79,7 +79,7 @@ public class GenerationEvenements {
 	Evenement ev19 = new Evenement("Amphi sysème avec Mr Beaufils","Je discute avec mon voisin","J'ecoute sagement",0,0,0,0,-100,30,new Date(2,5,10));
 	Evenement ev20 = new Evenement("Révisions","Je révise seul","Je révise avec un pote","Je revise pas",0,0,0,-10,-5,10,20,-10,-10,new Date(2,6,10));
 	Evenement ev25 = new Evenement("Vendredi y'a une soirée mais samedi matin tu as cobol","Le cobol on s'en fou","Je vais pas assumer si je sors",10,-10,-10,0,-15,0,new Date(2,6,20));
-	Evenement ev21 = new Evenement("Mon pote me propose une aprem fifa","J'y vais","J'y vais pas",-10,10,0,0,0,-10,new Date(2,7,14));
+	Evenement ev21 = new Evenement("Mon pote me propose une aprem fifa","J'y vais","J'y vais pas",10,-10,0,0,-10,10,new Date(2,7,14));
 	Evenement ev26 = new Evenement("Tu as presque fini les deux semaines, choisi la bonne réponse, quel est le meilleur jeu presenté ?","Celui ci","Les autres jeux",0,-50,0,-50,0,-50,new Date(2,7,22));
 
 	
