@@ -178,9 +178,8 @@ public class Main {
 		System.out.println("Tu as obtenu un score de " + scoreResultats + " en Resultats ");
 		System.out.println("Tu veux rejouer à notre super jeux ? ");
 		System.out.println(" taper 1)OUI ou 2)NON");
-		Scanner lectureClavier = new Scanner(System.in);
 		char rejouer;
-		rejouer=lectureClavier.nextLine().charAt(0);
+		rejouer=sc.nextLine().charAt(0);
 		if(rejouer=='1'){
 			relancerJeux=true;
 			
@@ -189,7 +188,9 @@ public class Main {
 			System.out.println("Bye !!!");
 			relancerJeux=false;
 		}
+		
 	}
+		sc.close();
 	}
 
 
