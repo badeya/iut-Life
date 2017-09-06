@@ -94,10 +94,14 @@ public class Main {
 				if(val<0.015){
 					if(TapAXSecondes.main(sc)==1){
 						Joueur.setBarreEnergie(new Barre(NomBarre.ENERGIE));
+					}else{
+						Joueur.getBarreEnergie().setValeur(Joueur.getBarreEnergie().getValeur()-15);
 					}
 				}else if(val<0.03){
 					if(TapTap.main(sc)>40){
 						Joueur.setBarrePopularite(new Barre(NomBarre.POPULARITE));
+					}else{
+						Joueur.getBarrePopularite().setValeur(Joueur.getBarrePopularite().getValeur()-15);
 					}
 					
 				}
