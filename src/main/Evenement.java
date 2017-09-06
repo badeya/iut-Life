@@ -103,6 +103,10 @@ public class Evenement {
 	
 	public int getNbChoix() {
 		return nbChoix;
+	}	
+
+	public Date getUneDateEvenement() {
+		return uneDateEvenement;
 	}
 
 	public void consequenceChoix1(){
@@ -137,18 +141,21 @@ public class Evenement {
 		String resultat;
 		if(nbChoix==3){
 			resultat= this.event+"\n"+
-					   " choix1: "+this.choix1+"\n"+
-					   " choix2: "+this.choix2+"\n"+
-					   " choix3: "+this.choix3+"\n";
+					   " Choix 1: "+this.choix1+"\n"+
+					   " Choix 2: "+this.choix2+"\n"+
+					   " Choix 3: "+this.choix3+"\n";
 			
 		}
 		else{
 			resultat=this.event+"\n"+
-					   " choix1: "+this.choix1+"\n"+
-					   " choix2: "+this.choix2+"\n";
+					   " Choix 1: "+this.choix1+"\n"+
+					   " Choix 2: "+this.choix2+"\n";
 		}
 		return resultat;
 	}
-
+	
+	public String toString2() {
+		return event + " " + this.getUneDateEvenement().getHeure();
+	}
 	
 }

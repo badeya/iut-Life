@@ -92,12 +92,22 @@ public class Main {
 				//MINIJEU SI PAS D'EVENEMENT
 				Double val=r.nextDouble();
 				if(val<0.015){
+					System.out.println();
+					System.out.println("Energie:"+Joueur.getBarreEnergie());
+					System.out.println("Popularité:"+Joueur.getBarrePopularite());
+					System.out.println("Résultats:"+Joueur.getBarreResultats());
+					System.out.println();
 					if(TapAXSecondes.main(sc)==1){
 						Joueur.setBarreEnergie(new Barre(NomBarre.ENERGIE));
 					}else{
 						Joueur.getBarreEnergie().setValeur(Joueur.getBarreEnergie().getValeur()-15);
 					}
 				}else if(val<0.03){
+					System.out.println();
+					System.out.println("Energie:"+Joueur.getBarreEnergie());
+					System.out.println("Popularité:"+Joueur.getBarrePopularite());
+					System.out.println("Résultats:"+Joueur.getBarreResultats());
+					System.out.println();
 					if(TapTap.main(sc)>40){
 						Joueur.setBarrePopularite(new Barre(NomBarre.POPULARITE));
 					}else{
