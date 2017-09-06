@@ -52,7 +52,7 @@ public class Main {
 			Evenement moment=null;
 
 			for(Evenement e:e1){
-				if(e.uneDateEvenement.getHeure()==heureActuelle && e.uneDateEvenement.getJour()==jourActuel && e.uneDateEvenement.getSemaine()==semaineActuelle){
+				if(e.getDateEvenement().getHeure()==heureActuelle && e.getDateEvenement().getJour()==jourActuel && e.getDateEvenement().getSemaine()==semaineActuelle){
 
 					moment=e;
 
@@ -63,7 +63,7 @@ public class Main {
 			if(moment!=null){
 				Double rdm=r.nextDouble();
 				// Debug : System.out.println("L'evenement "+moment.toString()+" proba:"+moment.proba+" Random: "+rdm);
-				if(moment.proba > rdm){
+				if(moment.getProba() > rdm){
 					System.out.println(new Date(semaineActuelle,jourActuel,heureActuelle).toString());
 					System.out.println(moment.toString());
 					System.out.println("Energie:"+Joueur.getBarreEnergie());
